@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="custom_subscription_sign" name="Subscription Signature">
+
+        <!-- <t t-call="portal.portal_layout" t-if="account.custom_to_do_sign">
+            <t t-set="wrapwrap_classes" t-value="'o_portal_bg_dark'"/>
+            <header class="modal-header">
+            Customer Signature - (<p t-field="account.name"></p>)
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">&amp;times;</button>
+            </header>
+            <t t-call="portal.signature_form">
+                <t t-set="call_url" t-value="account._get_custom_subscription_signature_accept_url()"/>
+                <t t-set="default_name" t-value="request.env.user.partner_id.name"/>
+            </t>
+        </t> -->
+        <t t-call="website.layout">
+       <!--  <div role="dialog" class="modal fade" id="customer_custom_signature_subscription_probc">
+                <div class="modal-dialog" t-if="account.custom_to_do_sign"> -->
+                    <!-- <form id="accept" method="POST" t-att-data-order-id="account.id" class="js_accept_json modal-content js_website_submit_form"> -->
+                    <!-- <form id="subscription_accept" method="POST" t-att-data-order-id="account.id" t-att-data-token="account.access_token" class="js_accept_json modal-content js_website_submit_form"> -->
+                        <!-- <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <header class="modal-header">
+                            Customer Signature - (<span t-esc="account.name"></span>)
+                            <button type="button" class="close pull-right" data-bs-dismiss="modal" aria-label="Close">&amp;times;</button>
+                        </header> -->
+
+                       <!--  <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/> -->
+                        <div class="modal-dialog" >
+                            <div class="modal-content">
+                            <header class="modal-header">
+                                <h4 class="modal-title">Customer Signature -(<span t-esc="account.name"></span>)</h4>
+                                <button type="button" class="btn-close" data="modal" aria-label="Close"></button>
+                            </header>
+                            <main class="modal-body" id="sign-dialog">
+                                <t t-call="portal.signature_form">
+                                    <t t-set="call_url" t-value="account._get_custom_subscription_signature_accept_url()"/>
+                                    <t t-set="default_name" t-value="request.env.user.partner_id.name"/>
+                                </t>
+                                <!-- <t t-call="portal.signature_form">
+                                    <t t-set="call_url" t-value="account._get_custom_subscription_signature_accept_url()"/>
+                                    <t t-set="default_name" t-value="request.env.user.partner_id.name"/>
+                                </t> -->
+                            </main>
+                    <!-- </form> -->
+                </div>
+            </div>
+        </t>
+
+        <!-- <t t-call="website.layout" t-if="not account.custom_to_do_sign">
+          <div id="wrap">
+            <div class="oe_structure" id="oe_structure_website_form_sign_subscription_1"/>
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-lg-7 col-xl-6 mr-lg-auto oe_structure">
+                        <section class="pt40 s_text_block pb40 o_colored_level o_cc o_cc1" data-bs-snippet="s_text_block" data-bs-name="Text">
+                            <div class="container">
+                                <span class="d-block fa fa-4x fa-thumbs-up mx-auto rounded-circle bg-primary"/><br/>
+                                <h1 class="text-center">Thank You!</h1>
+                                <div class="pb16 pt16 s_hr" data-bs-snippet="s_hr" data-bs-name="Separator">
+                                    <hr class="mx-auto border-top w-50 border-dark text-center"/>
+                                </div>
+                                <h5 class="text-center">
+                                    <span class="fa fa-check-circle"/>
+                                    <span>Signature has been recorded for subscription.</span>
+                                </h5>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </t> -->
+    </template>
+
+</odoo>
