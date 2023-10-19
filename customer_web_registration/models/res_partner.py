@@ -19,8 +19,7 @@ class ResPartner(models.Model):
     gender = fields.Selection(string='Gender', 
                             selection=[
                                         ('male', 'Male'),
-                                        ('female', 'Female'),
-                                        ('rather not say', 'Rather not say')
+                                        ('female', 'Female')
                                         ])
     nationality = fields.Many2one('res.country', string='Nationality')
     employment_status = fields.Char(string="Current Employment Status")
@@ -30,11 +29,12 @@ class ResPartner(models.Model):
                                     ('it', 'IT'), 
                                     ('retail', 'Retail'), 
                                     ('marketing', 'Marketing'), 
+                                    ('manufacture', 'Manufacture'), 
                                     ('construction', 'Construction'), 
                                     ('self', 'Self')
                                     ])
     industry_segment = fields.Char(string="Industry Segment")
-    intrested_fields = fields.Char(string='Interested Fields')
+    interested_products = fields.Char(string='Interested Products')
     referral_name = fields.Char(string='Referral’s Name')
     birthdate = fields.Date(string='Birthday')
 
@@ -43,25 +43,26 @@ class ResPartner(models.Model):
     company_address = fields.Text(string='Company Address')  
     no_of_employees = fields.Selection([
                                         ('',''), 
-                                        ('>20','>20'), 
-                                        ('20-50','20-50'), 
-                                        ('50-70','50-70'), 
-                                        ('70-100','70-100')
+                                        ('1-4','1-4'), 
+                                        ('5-19','5-19'), 
+                                        ('20-49','20-49'), 
+                                        ('50-99','50-99'),
+                                        ('100-499','100-499'),
+                                        ('500-9999','500-9999')
                                         ])
     industry_sector = fields.Char('Industry Sector')
-    course_id = fields.Many2one('slide.channel', string='Select Course')
-    no_registered_employee = fields.Integer('No of Employee to be Registred')
+    carrier_id = fields.Many2one('slide.channel', string='Select Carrier')
+    family_members = fields.Integer('Family members')
     contract_term = fields.Selection([
                                     ('',''), 
-                                    ('6 months','6 Months'), 
+                                    ('1 time','1 time'), 
                                     ('1 year','1 Year'), 
-                                    ('2 Year','2 Year'), 
-                                    ('>2 years','>2 Years')
+                                    ('>1 years','>1 Years')
                                     ])
     contact_name = fields.Char('Contact Name')
-    contact_number = fields.Char('Contact Number')
-    designation = fields.Char('Designation')
+    contact_number = fields.Char('Contact Phone')
     susbcription_fee = fields.Char('Estimated Subscription Fee')
+    estimated_premium = fields.Integer('Estimated Premium')
     prior_agreed_fees = fields.Char('Prior Agreed Fees as per contract')
     start_contract_date = fields.Date('Start Date of Contract')
     expiry_contrat_date = fields.Date('Expiry Date of Contract')

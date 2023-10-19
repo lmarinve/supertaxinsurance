@@ -1,0 +1,105 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_signup_tnc
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-22 07:51+0000\n"
+"PO-Revision-Date: 2020-10-22 07:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_signup_tnc
+#: model_terms:ir.ui.view,arch_db:sh_signup_tnc.sh_template_website_signup_login_terms_conditions
+msgid "<span>On clicking Sign up button</span>"
+msgstr "<span> en cliquant sur le bouton d'inscription </span>"
+
+#. module: sh_signup_tnc
+#: model_terms:ir.ui.view,arch_db:sh_signup_tnc.sh_template_website_signup_login_terms_conditions
+msgid "Close"
+msgstr "roche"
+
+#. module: sh_signup_tnc
+#: model:ir.model,name:sh_signup_tnc.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de configuation"
+
+#. module: sh_signup_tnc
+#: model:ir.model.fields,field_description:sh_signup_tnc.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:sh_signup_tnc.field_website__display_name
+msgid "Display Name"
+msgstr "Afficher n nom"
+
+#. module: sh_signup_tnc
+#: model:ir.model.fields,field_description:sh_signup_tnc.field_res_config_settings__id
+#: model:ir.model.fields,field_description:sh_signup_tnc.field_website__id
+msgid "ID"
+msgstr "identfiant"
+
+#. module: sh_signup_tnc
+#: model:ir.model.fields,field_description:sh_signup_tnc.field_res_config_settings__sh_terms_label_auth
+#: model:ir.model.fields,field_description:sh_signup_tnc.field_website__sh_terms_label_auth
+#: model_terms:ir.ui.view,arch_db:sh_signup_tnc.sh_res_config_settings_signup_terms_conditions_inherit
+msgid "Label"
+msgstr "Étiueter"
+
+#. module: sh_signup_tnc
+#: model:ir.model.fields,field_description:sh_signup_tnc.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:sh_signup_tnc.field_website____last_update
+msgid "Last Modified on"
+msgstr "Dernière modificatin sur"
+
+#. module: sh_signup_tnc
+#: model_terms:ir.ui.view,arch_db:sh_signup_tnc.sh_res_config_settings_signup_terms_conditions_inherit
+msgid "On set to True \"Terms and Conditions\" will be visible at sign up"
+msgstr "Sur défini sur True \ "Termes et conditions \" sera visible à l'inscrption"
+
+#. module: sh_signup_tnc
+#: model_terms:ir.ui.view,arch_db:sh_signup_tnc.sh_template_website_signup_login_terms_conditions
+msgid "See Terms &amp; Conditions"
+msgstr "Voir termes & amp; Condtions"
+
+#. module: sh_signup_tnc
+#: model:ir.model.fields,field_description:sh_signup_tnc.field_res_config_settings__sh_show_terms_conditions_website_auth
+msgid "Show Terms & Conditions"
+msgstr "Afficher les conditions génrales"
+
+#. module: sh_signup_tnc
+#: model:ir.model.fields,field_description:sh_signup_tnc.field_website__sh_show_terms_conditions_website_auth
+msgid "Show Terms & Conditions?"
+msgstr "Afficher les termes et condiions?"
+
+#. module: sh_signup_tnc
+#: model:ir.model.fields,field_description:sh_signup_tnc.field_res_config_settings__sh_terms_text_auth
+#: model:ir.model.fields,field_description:sh_signup_tnc.field_website__sh_terms_text_auth
+#: model_terms:ir.ui.view,arch_db:sh_signup_tnc.sh_res_config_settings_signup_terms_conditions_inherit
+msgid "Terms & Conditions"
+msgstr "termes et condtions"
+
+#. module: sh_signup_tnc
+#: model_terms:ir.ui.view,arch_db:sh_signup_tnc.sh_res_config_settings_signup_terms_conditions_inherit
+msgid "Terms &amp; Conditions"
+msgstr "TERMES ET AMP; Condtions"
+
+#. module: sh_signup_tnc
+#: model_terms:ir.ui.view,arch_db:sh_signup_tnc.sh_template_website_signup_login_terms_conditions
+msgid "Terms Conditions"
+msgstr "Termes et condtions"
+
+#. module: sh_signup_tnc
+#: model:ir.model.fields,field_description:sh_signup_tnc.field_res_config_settings__sh_terms_title_auth
+#: model:ir.model.fields,field_description:sh_signup_tnc.field_website__sh_terms_title_auth
+#: model_terms:ir.ui.view,arch_db:sh_signup_tnc.sh_res_config_settings_signup_terms_conditions_inherit
+msgid "Title"
+msgstr Titre"
+
+#. module: sh_signup_tnc
+#: model:ir.model,name:sh_signup_tnc.model_website
+msgid "Website"
+msgstr "Site Inernet"

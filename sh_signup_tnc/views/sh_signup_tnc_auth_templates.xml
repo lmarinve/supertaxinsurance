@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <template id="sh_template_website_signup_login_terms_conditions" inherit_id="auth_signup.signup" customize_show="True" name="Website Auth Terms &amp; Conditions">
+        <xpath expr="//div[hasclass('oe_login_buttons')]" position="before">
+            <t t-set="website_ctx_id" t-value="request.context['website_id']" />
+            <t t-if="website_ctx_id">
+                <t t-set="website_id" t-value="request.env['website'].sudo().search([ ('id','=',website_ctx_id) ],limit=1 )" />
+                <t t-if="website_id">
+                    <div class="panel-body" t-if="website.sh_show_terms_conditions_website_auth">
+                        <input id="chk_terms_auth" type="checkbox">
+                            <span style="margin-left:6px;">On clicking Sign up button</span>
+                            <span t-if="website_id.sh_terms_label_auth" t-field="website_id.sh_terms_label_auth" style="padding-left:5px;padding-top:0px;" />
+                        </input>
+                        <input id="show_terms_website_auth" name="show_terms_website_auth" type="hidden" t-att-value="website_id.sh_show_terms_conditions_website_auth" />
+
+                        <a href="#" id="btn_signup_terms_conditions" type="action" string="Terms Conditions" data-bs-toggle="modal" data-bs-target="#website_signup_terms_modal" data-bs-backdrop="static" data-bs-keyboard="false">
+                            See Terms &amp; Conditions
+                        </a>
+                        <div id="website_signup_terms_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalSignup" aria-hidden="true" data-bs-backdrop="static">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="myModalSignup">
+                                            <span t-if="website_id.sh_terms_title_auth" t-field="website_id.sh_terms_title_auth" />
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <br />
+                                                <span t-if="website_id.sh_terms_text_auth" t-field="website_id.sh_terms_text_auth" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button class="btn btn-default closemodel" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                </t>
+            </t>
+        </xpath>
+    </template>
+</odoo>

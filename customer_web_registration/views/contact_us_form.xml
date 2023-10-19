@@ -93,17 +93,23 @@
 													</label>
 													<select class="form-control s_website_form_input" id="khyyke60o4c" name="no_of_employees" required="1">
 														<option value=""/>
-														<option value=">20">
-															>20
+														<option value="1-4">
+															1-4
 														</option>
-														<option value="20-50">
-															20-50
+														<option value="5-19">
+															5-19
 														</option>
-														<option value="50-70">
-															50-70
+														<option value="20-49">
+															20-49
 														</option>
-														<option value="70-100">
-															70-100
+														<option value="50-99">
+															50-99
+														</option>
+														<option value="100-499">
+															100-499
+														</option>
+														<option value="500-9999">
+															500-9999
 														</option>
 													</select>
 												</div>
@@ -142,14 +148,14 @@
 													<label class="s_website_form_label" for="khyyke60o4c" style="width: 200px">
 														<b>
 															<span>
-																Select Course
+																Select Carrier
 															</span>
 														</b>
 													</label>
-													<select class="form-control" name="course_id" id="course_id_onchange" required="1">
+													<select class="form-control" name="carrier_id" id="carrier_id_onchange" required="1">
 														<option value=""/>
-														<t t-as="course_id" t-foreach="request.env['slide.channel'].search([]) or []">
-															<option t-att-value="course_id.id" t-esc="course_id.name"/>
+														<t t-as="carrier_id" t-foreach="request.env['slide.channel'].search([]) or []">
+															<option t-att-value="carrier_id.id" t-esc="carrier_id.name"/>
 														</t>
 													</select>
 												</div>
@@ -159,11 +165,11 @@
 													<label class="s_website_form_label" for="khyyke60o4c" style="width: 300px">
 														<b>
 															<span>
-																No of Employees to be registered
+																Family members
 															</span>
 														</b>
 													</label>
-													<input class="form-control s_website_form_input" id="khyyke60o4c" name="no_registered_employee" required="1" type="number"/>
+													<input class="form-control s_website_form_input" id="khyyke60o4c" name="family_members" required="1" type="number"/>
 												</div>
 											</div>
 											<div class="row">
@@ -177,17 +183,14 @@
 													</label>
 													<select class="form-control s_website_form_input" id="khyyke60o4c" name="contract_term" required="1">
 														<option value=""/>
-														<option value="6 months">
-															6 Months
+														<option value="1 time">
+															1 time
 														</option>
 														<option value="1 year">
 															1 Year
 														</option>
-														<option value="2 years">
-															2 Years
-														</option>
-														<option value="&gt;2 years">
-															&amp;gt;2 Years
+														<option value="&gt;1 years">
+															&amp;gt;1 Years
 														</option>
 													</select>
 												</div>
@@ -203,7 +206,7 @@
 													</label>
 													<input class="form-control s_website_form_input" id="khyyke60o4c" name="name" pattern="[a-zA-Z ]*" placeholder="Name" required="1" title="Please Enter Alphabets Only" type="text"/>
 													<br/>
-													<input class="form-control s_website_form_input" id="khyyke60o4c" name="designation" placeholder="Designation" required="true" type="text"/>
+													<input class="form-control s_website_form_input" id="khyyke60o4c" name="estimated_premium" placeholder="Estimated Premium" required="true" type="text"/>
 													<br/>
 													<input class="form-control s_website_form_input" id="khyyke60o4c" name="phone" placeholder="Phone" required="true" type="text"/>
 													<br/>

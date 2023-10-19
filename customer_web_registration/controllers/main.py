@@ -22,16 +22,16 @@ class ContactUsLead(http.Controller):
                 "name": "Inquiry",
                 "description" : kw.get('description'),
                 "type": 'lead',
-                "designation": kw.get('designation'),
+                "estimated_premium": kw.get('estimated_premium'),
                 "contact_name": kw.get("name"),
                 "contact_number": kw.get("phone"),
-                "no_registered_employee": kw.get("no_registered_employee"),
+                "family_members": kw.get("family_members"),
                 "no_of_employees": kw.get("no_of_employees"),
                 "contract_term": kw.get("contract_term"),
                 "industry_sector": kw.get('industry_sector'),
                 'partner_name': kw.get('company_name'),
                 'street': kw.get('company_address'),
-                'course_id': kw.get('course_id'),
+                'carrier_id': kw.get('carrier_id'),
                 }
         lead_length = request.env["crm.lead"].sudo().create(vals)
         email_from = request.env.user.login
@@ -83,7 +83,7 @@ class AuthSignupRegistration(AuthSignupHome):
             'email': kw.get('login'),
             'referral_name': kw.get('referral_name'),
             'gender': kw.get('gender'),
-            'intrested_fields' : kw.get('intrested_fields'),
+            'interested_products' : kw.get('interested_products'),
             'industry_segment': kw.get('industry_segment'),
             'comment': kw.get('description'),
         }
@@ -104,7 +104,7 @@ class AuthSignupRegistration(AuthSignupHome):
             'company_type': kw.get('company_type'),
             'no_of_employees': kw.get('no_of_employees'),
             'industry_sector': kw.get('industry_sector'),
-            'no_registered_employee': kw.get('no_registered_employee'),
+            'family_members': kw.get('family_members'),
             'contract_term': kw.get('contract_term'),
             'susbcription_fee': kw.get('susbcription_fee'),
             'prior_agreed_fees': kw.get('prior_agreed_fees'),
@@ -112,8 +112,8 @@ class AuthSignupRegistration(AuthSignupHome):
             'contact_number': kw.get("contact_number"),
             'start_contract_date': kw.get('start_contract_date') or str(datetime.datetime.now().date()),
             'expiry_contrat_date': kw.get('expiry_contrat_date') or str(datetime.datetime.now().date()),
-            'designation': kw.get('designation'),
-            'course_id': kw.get('course_id'),
+            'estimated_premium': kw.get('estimated_premium'),
+            'carrier_id': kw.get('carrier_id'),
             'comment': kw.get('description'),        
             }
         request.env["res.users"].sudo().create(vals)
