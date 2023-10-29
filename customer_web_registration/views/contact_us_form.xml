@@ -32,17 +32,6 @@
 						</div>
 					</div>
 				</section>
-				<section class="s_text_block pt32 o_colored_level pb0" data-name="Text" data-snippet="s_text_block">
-					<div class="s_allow_columns container">
-						<p>
-							Great stories have a
-							<b class="o_default_snippet_text">
-								personality
-							</b>
-							. Consider telling a great story that provides personality. Writing a story with personality for potential clients will assist with making a relationship connection. This shows up in small quirks like word choices or phrases. Write from your point of view, not from someone else's experience.
-						</p>
-					</div>
-				</section>
 				<div class="row">
 					<div class="col-2"/>
 					<div class="col-4" style="padding-right:100px; border-right: 1px solid #ccc;">
@@ -288,26 +277,6 @@
 							</div>
 							<div class="row">
 								<div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required col-lg-12 o_colored_level" data-name="Field" data-type="char"/>
-							</div>
-							<div class="row">
-								<div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required col-lg-12 o_colored_level">
-									<strong>
-										<span>
-											Follow us
-										</span>
-									</strong>
-								</div>
-							</div>
-							<div>
-								<a style="color:beige;" t-att-href="res_company.social_facebook">
-									<img class="saturate_col" style="max-height: 100%;max-width:10%%;object-fit: cover;" t-att-src="'customer_web_registration/static/description/fb.png'"/>
-								</a>
-								<a style="color:beige;" t-att-href="res_company.social_twitter">
-									<img class="saturate_col" style="max-height: 100%;max-width:10%;object-fit: cover;" t-att-src="'customer_web_registration/static/description/twitter.png'"/>
-								</a>
-								<a style="color:beige;" t-att-href="res_company.social_instagram">
-									<img class="saturate_col" style="max-height: 100%;max-width:10%;object-fit: cover;" t-att-src="'customer_web_registration/static/description/insta.png'"/>
-								</a>
 							</div>
 						</div>
 					</div>
