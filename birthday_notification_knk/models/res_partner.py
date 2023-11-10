@@ -8,7 +8,7 @@ from odoo import api, fields, models
 class ResPartner(models.Model):
     _inherit = "res.partner"
 
-    birthday = fields.Date(string='Birthday')
+    birthday = fields.Date(string='DOB')
 
     @api.model
     def send_birthday_notification(self):
