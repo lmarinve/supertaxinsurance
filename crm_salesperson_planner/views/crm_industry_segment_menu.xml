@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2021 Sygel - Valentin Vinagre
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <!-- CONFIGURATION -->
+    <menuitem
+        id="menu_crm_config_industry_segment"
+        name="Industry Segment"
+        parent="crm.crm_menu_config"
+        sequence="40"
+        groups="sales_team.group_sale_manager"
+    />
+    <menuitem
+        name="Industry Segment"
+        id="menu_crm_config_industry_segment_industry_segment"
+        parent="menu_crm_config_industry_segment"
+        action="crm_industry_segment_action"
+        sequence="2"
+    />
+</odoo>

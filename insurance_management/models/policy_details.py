@@ -49,12 +49,12 @@ class PolicyDetails(models.Model):
         required=True, default='draft')
     hide_inv_button = fields.Boolean(copy=False)
 
-    policy_type_id = fields.Many2one(
-        'policy.type', string='Policy Type', required=True)
-    policy_group_id = fields.Many2one(
-        'policy.group', string='Policy Group', required=True)
     policy_class_id = fields.Many2one(
         'policy.class', string='Policy Class', required=True)
+    policy_group_id = fields.Many2one(
+        'policy.group', string='Policy Group', required=True)
+    policy_type_id = fields.Many2one(
+        'policy.type', string='Policy Type', required=True)
     policy_carrier_id = fields.Many2one(
         'policy.carrier', string='Policy Carrier', required=True)
     payment_type = fields.Selection(
@@ -112,28 +112,28 @@ class PolicyDetails(models.Model):
 
 
 
-class PolicyType(models.Model):
-    _name = 'policy.type'
+class PolicyClass(models.Model):
+    _name = 'policy.class'
 
     name = fields.Char(string='Description')
     policy_group_ids = fields.One2many(
-        'policy.group', 'policy_type_id', string='Policy Group')
+        'policy.group', 'policy_class_id', string='Policy Group')
     policy_carrier_ids = fields.One2many(
-        'policy.carrier', 'policy_type_id', string='Policy Carrier')
+        'policy.carrier', 'policy_class_id', string='Policy Carrier')
 
 
 class PolicyGroup(models.Model):
     _name = 'policy.group'
 
     name = fields.Char(string='Description')
-    policy_type_id = fields.Many2one(
-        'policy.type', string='Policy Type', required=True)
+    policy_class_id = fields.Many2one(
+        'policy.class', string='Policy Class', required=True)
     policy_class_ids = fields.One2many(
-        'policy.class', 'policy_group_id', string='Policy Class')
+        'policy.type', 'policy_group_id', string='Policy Type')
 
 
-class PolicyClass(models.Model):
-    _name = 'policy.class'
+class PolicyType(models.Model):
+    _name = 'policy.type'
 
     name = fields.Char(string='Description')
     policy_group_id = fields.Many2one(
@@ -144,5 +144,5 @@ class PolicyCarrier(models.Model):
     _name = 'policy.carrier'
 
     name = fields.Char(string='Description')
-    policy_type_id = fields.Many2one(
-        'policy.type', string='Policy Type', required=True)
+    policy_class_id = fields.Many2one(
+        'policy.class', string='Policy Class', required=True)
