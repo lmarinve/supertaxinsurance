@@ -4,10 +4,10 @@
 <odoo>
     <record
         model="ir.ui.view"
-        id="crm_industry_segment_tree_view"
+        id="crm_job_nature_tree_view"
     >
-        <field name="name">CRM - Industry Segment Tree</field>
-        <field name="model">crm.industry.segment</field>
+        <field name="name">CRM - Nature of Job Tree</field>
+        <field name="model">crm.job.nature</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name" />
@@ -16,13 +16,13 @@
     </record>
     <record
         model="ir.ui.view"
-        id="crm_industry_segment_form_view"
+        id="crm_job_nature_form_view"
     >
-        <field name="name">CRM - Industry Segment Form</field>
-        <field name="model">crm.industry.segment</field>
+        <field name="name">CRM - Natureof Job Form</field>
+        <field name="model">crm.job.nature</field>
         <field name="arch" type="xml">
-            <form string="Industry Segment">
-                <sheet string="Industry Segment">
+            <form string="Nature of Job">
+                <sheet string="Nature of Job">
                     <div class="oe_title">
                         <h1>
                             <field name="name" />
@@ -33,7 +33,7 @@
 		    </group>
 		    <notebook>
                         <page string="Nature of Jobs">
-                            <field name="job_nature_ids"/>
+                            <field name="occupation_ids"/>
                         </page>
                     </notebook>
                 </sheet>
@@ -42,14 +42,14 @@
     </record>
     <record
         model="ir.actions.act_window"
-        id="crm_industry_segment_action"
+        id="crm_job_nature_action"
     >
-        <field name="name">Industry Segment</field>
-        <field name="res_model">crm.industry.segment</field>
+        <field name="name">Nature of Jobs</field>
+        <field name="res_model">crm.job.nature</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">
-                Record industry segment.
+                Record Nature of Jobs.
             </p>
         </field>
     </record>

@@ -18,6 +18,7 @@ class CrmJobNature(models.Model):
     _name = 'crm.job.nature'
 
     name = fields.Char(string='Description')
+    code = fields.Char(string="Code", required=True)
     industry_segment_id = fields.Many2one(
         'crm.industry.segment', string='Industry Segment', required=True)
     occupation_ids = fields.One2many(

@@ -12,9 +12,17 @@
     />
     <menuitem
         name="Industry Segment"
-        id="menu_crm_config_industry_segment_industry_segment"
+        id="menu_crm_industry_segment"
         parent="menu_crm_config_industry_segment"
         action="crm_industry_segment_action"
-        sequence="2"
+        sequence="10"
     />
+    <menuitem
+        name="Nature of Job"
+        id="menu_crm_job_nature"
+        parent="menu_crm_config_industry_segment"
+        action="crm_job_nature_action"
+        sequence="20"
+    />
+
 </odoo>
