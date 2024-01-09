@@ -9,15 +9,18 @@
         <field name="inherit_id" ref="crm.crm_lead_view_form" />
         <field name="arch" type="xml">              
             <xpath expr="//field[@name='lang_id']" position="after">
-                <field name="no_of_employees"/>
+                <field name="employment_status"/>
+                <field name="nature_of_job"/>
+                <field name="employer_name"/>
                 <field name="industry_sector"/>
-                <field name='carrier_id'/>
+                <field name="industry_segment"/>
+                <field name="no_of_employees"/>
             </xpath>
             <xpath expr="//field[@name='email_cc']" position="after">
-                <field name='estimated_premium'/>
+                <field name='interested_products'/>
                 <field name='contact_number'/>
-                <field name='family_members'/>
-                <field name='contract_term'/>
+                <field name='referral_name'/>
+                <field name='birthday'/>
             </xpath>
         </field>
     </record>

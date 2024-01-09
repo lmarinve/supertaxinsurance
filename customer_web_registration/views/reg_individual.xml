@@ -156,20 +156,44 @@
 										<div class="col-sm">
 											<select class="form-control s_website_form_input" name="nature_of_job">
 												<option value=""/>
-												<option value="it">
-													IT
+												<option value="aviation">
+													Aviation
 												</option>
-												<option value="retail">
-													Retail
+												<option value="businessindustry">
+													Business Industry
 												</option>
-												<option value="marketing">
-													Marketing
-												</option>
-												<option value="construction">
+												<option value="Construction">
 													Construction
+												</option>
+												<option value="education">
+													Education
+												</option>
+												<option value="homebusiness">
+													Home Business
+												</option>
+												<option value="manufacture">
+													Manufacture
+												</option>
+												<option value="military">
+													Military
+												</option>
+												<option value="nationalsecurity">
+													National Security
+												</option>
+												<option value="publicsafety">
+													Public Safety
+												</option>
+												<option value="retailstore">
+													Retail Store
 												</option>
 												<option value="self">
 													Self
+												</option>
+												<option value="warehouse">
+													Ware House
+												</option>
+												<option value="Other">
+													Other
 												</option>
 											</select>
 										</div>

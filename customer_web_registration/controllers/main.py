@@ -22,16 +22,10 @@ class ContactUsLead(http.Controller):
                 "name": "Inquiry",
                 "description" : kw.get('description'),
                 "type": 'lead',
-                "estimated_premium": kw.get('estimated_premium'),
                 "contact_name": kw.get("name"),
                 "contact_number": kw.get("phone"),
-                "family_members": kw.get("family_members"),
-                "no_of_employees": kw.get("no_of_employees"),
-                "contract_term": kw.get("contract_term"),
-                "industry_sector": kw.get('industry_sector'),
                 'partner_name': kw.get('company_name'),
                 'street': kw.get('company_address'),
-                'carrier_id': kw.get('carrier_id'),
                 }
         lead_length = request.env["crm.lead"].sudo().create(vals)
         email_from = request.env.user.login

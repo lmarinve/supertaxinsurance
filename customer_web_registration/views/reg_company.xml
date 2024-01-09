@@ -74,17 +74,23 @@
 										<div class="col-sm">
 											<select id="weibh1m8ztk" name="no_of_employees" required="1">
 												<option value=""/>
-												<option value="&gt;20">
-													&amp;gt;20
+												<option value="1-4">
+													1-4
 												</option>
-												<option value="20-50">
-													20-50
+												<option value="5-19">
+													5-19
 												</option>
-												<option value="50-70">
-													50-70
+												<option value="20-49">
+													20-49
 												</option>
-												<option value="70-100">
-													70-100
+												<option value="50-99">
+													50-99
+												</option>
+												<option value="100-499">
+													100-499
+												</option>
+												<option value="500-9999">
+													&amp;gt;500
 												</option>
 											</select>
 										</div>
@@ -117,24 +123,6 @@
 									</div>
 								</div>
 								<br/>
-								<div class="form-group s_website_form_field col-12 s_website_form_custom" data-name="Field" data-type="char" id="50u6nr8im5f">
-									<div class="row s_col_no_resize s_col_no_bgcolor">
-										<label class="col-form-label col-sm-auto s_website_form_label " for="50u6nr8im5f" style="width: 200px">
-											<span class="s_website_form_label_content">
-												Select Course
-											</span>
-										</label>
-										<div class="col-sm">
-											<select class="form-control" name="carrier_id" required="1">
-												<option value=""/>
-												 <t t-as="carrier_id" t-foreach="request.env['slide.channel'].search([]) or []">
-													<option t-att-value="carrier_id.id" t-esc="carrier_id.name"/>
-												</t>
-											</select>
-										</div>
-									</div>
-								</div>
-								<br/>
 								<div class="form-group s_website_form_field col-12 s_website_form_custom" data-name="Field" data-type="char" id="c63pr9w5c5g">
 									<div class="row s_col_no_resize s_col_no_bgcolor">
 										<label class="col-form-label col-sm-auto s_website_form_label " for="c63pr9w5c5g" style="width: 200px">
@@ -152,34 +140,6 @@
 										</div>
 									</div>
 								</div>
-								<br/>
-								<div class="form-group s_website_form_field col-12 s_website_form_custom" data-name="Field" data-type="char" id="50u6nr8im5Sp">
-									<div class="row s_col_no_resize s_col_no_bgcolor">
-										<label class="col-form-label col-sm-auto s_website_form_label " for="50u6nr8im5Sp" style="width: 200px">
-											<span class="s_website_form_label_content">
-												Contract Terms
-											</span>
-										</label>
-										<div class="col-sm">
-											<select class="form-control s_website_form_input" id="50u6nr8im5Sp" name="contract_term" required="1">
-												<option value=""/>
-												<option value="6 months">
-													6 Months
-												</option>
-												<option value="1 year">
-													1 Year
-												</option>
-												<option value="2 Year">
-													2 Year
-												</option>
-												<option value="&gt;2 years">
-													&amp;gt;2 Years
-												</option>
-											</select>
-										</div>
-									</div>
-								</div>
-								<br/>
 								<br/>
 								<div class="form-group s_website_form_field col-12 col-lg-5 s_website_form_custom col-lg-12" data-name="Field" data-type="char" id="ae7rhibv80p">
 									<div class="row s_col_no_resize s_col_no_bgcolor">
@@ -199,19 +159,6 @@
 										</label>
 										<div class="col-sm">
 											<input class="form-control s_website_form_input" id="name" name="name" pattern="[a-zA-Z ]*" required="1" title="Please Enter Alphabets Only" type="text"/>
-										</div>
-									</div>
-								</div>
-								<br/>
-								<div class="form-group s_website_form_field col-12 s_website_form_custom" data-name="Field" data-type="char" id="kn6ol6bkha">
-									<div class="row s_col_no_resize s_col_no_bgcolor">
-										<label class="col-form-label col-sm-auto s_website_form_label " for="kn6ol6bkha" style="width: 200px">
-											<span class="s_website_form_label_content">
-												Designation *
-											</span>
-										</label>
-										<div class="col-sm">
-											<input class="form-control s_website_form_input" id="kn6ol6bkha" name="estimated_premium" placeholder="" required="1" title="Please Enter Aproximated Integer number" type="number"/>
 										</div>
 									</div>
 								</div>
@@ -238,32 +185,6 @@
 										</label>
 										<div class="col-sm">
 											<input class="form-control s_website_form_input" id="login" name="login" placeholder="" required="1" type="email"/>
-										</div>
-									</div>
-								</div>
-								<br/>
-								<div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom col-lg-6" data-name="Field" data-type="integer" id="nzslz27anz">
-									<div class="row s_col_no_resize s_col_no_bgcolor">
-										<label class="col-form-label col-sm-auto s_website_form_label " for="nzslz27anz" style="width: 200px">
-											<span class="s_website_form_label_content">
-												Estimated Subscription Fee
-											</span>
-										</label>
-										<div class="col-sm">
-											<input class="form-control s_website_form_input" id="nzslz27anz" name="susbcription_fee" pattern="[+-]?([0-9]*[.])?[0-9]+" placeholder="" title="Please Enter Float And Numbers only" type="text"/>
-										</div>
-									</div>
-								</div>
-								<br/>
-								<div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom col-lg-6" data-name="Field" data-type="integer" id="zw16omomxh">
-									<div class="row s_col_no_resize s_col_no_bgcolor">
-										<label class="col-form-label col-sm-auto s_website_form_label " for="zw16omomxh" style="width: 200px">
-											<span class="s_website_form_label_content">
-												Prior Agreed Fees per contract
-											</span>
-										</label>
-										<div class="col-sm">
-											<input class="form-control s_website_form_input" id="zw16omomxh" name="prior_agreed_fees" pattern="[+-]?([0-9]*[.])?[0-9]+" placeholder="" title="Please Enter Float And Numbers only" type="text"/>
 										</div>
 									</div>
 								</div>

@@ -7,15 +7,15 @@
 ##############################################################################
 
 {
-    'name': "Supertax Insurance Web Registration",
+    'name': "Customer Web Registration",
     'version': '16.0.1.0',
     'license': 'OPL-1',
     'summary': """Customer Registration Form | customer registration form |
                   Customer Registration Process | customer registration process |
                   Customer Registration | customer registration""",
     'category': 'Web',
-    'description': """Supertax Insurance Registration Process""",
-    'author': 'Supertax Insurance',
+    'description': """Customer Registration Process""",
+    'author': 'Compushop Service',
     'website': 'https://www.supertaxinsurance.com',
     'depends': [
                 'base', 
@@ -33,9 +33,9 @@
             'views/hr_employee_view.xml',
             'views/reg_company.xml',
             'views/reg_individual.xml',
-            'views/reg_thankyou.xml',
-            'views/res_partner_view.xml',
-            'views/website_view.xml',
+            # 'views/reg_thankyou.xml',
+            # 'views/res_partner_view.xml',
+            # 'views/website_view.xml',
             ],
     'assets':{
             'web.assets_frontend': [
@@ -43,6 +43,6 @@
             ],
     },
     'images': ['static/description/banner.jpg'],
-    'price': 21.00,
-    'currency': 'EUR',
+    'price': 200.00,
+    'currency': 'USD',
 }
