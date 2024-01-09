@@ -29,6 +29,11 @@ class ResUserInherit(models.Model):
             indiviual_vals = {
                                 'name': result.name,
                                 'company_type': result.company_type,
+                                'family_members': result.family_members,
+                                'estimated_annual_income': result.estimated_annual_income,
+                                'prior_agreed_fees': result.prior_agreed_fees,
+                                'start_contract_date': result.start_contract_date,
+                                'expiry_contrat_date': result.expiry_contrat_date,
                                 'employment_status': result.employment_status,
                                 'nature_of_job': result.nature_of_job,
                                 'referral_name': result.referral_name,
@@ -68,13 +73,7 @@ class ResUserInherit(models.Model):
                             'company_name': result.name,
                             'no_of_employees': result.no_of_employees,
                             'industry_sector': result.industry_sector,
-                            'family_members': result.family_members,
-                            'contract_term': result.contract_term,
-                            'susbcription_fee': result.susbcription_fee,
-                            'prior_agreed_fees': result.prior_agreed_fees,
-                            'start_contract_date': result.start_contract_date,
-                            'expiry_contrat_date': result.expiry_contrat_date,
-                            'estimated_premium': result.estimated_premium,
+                            'industry_segment': result.industry_segment,
                             }
             if result.partner_id:
                 result.partner_id.email = result.login

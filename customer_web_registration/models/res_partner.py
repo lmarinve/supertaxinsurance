@@ -31,13 +31,14 @@ class ResPartner(models.Model):
     expiry_contrat_date = fields.Date('Expiry Date of Initial Policy')
     employment_status = fields.Selection([
                                 ('', ''), 
-                                ('contract1099', 'Contract 1099'), 
-                                ('self', 'Self Employee'), 
                                 ('partner', 'Business Partner'), 
+                                ('contract1099', 'Contract 1099'), 
                                 ('fullw2', 'Full time W2'), 
                                 ('partw2', 'Part time W2'), 
+                                ('self', 'Self Employee'), 
                                 ('student', 'Student'),
-                                ('unemployee', 'Unemployee')
+                                ('unemployee', 'Unemployee'),
+                                ('other', 'Other'),
                                 ])
     nature_of_job = fields.Selection([
                                     ('', ''), 

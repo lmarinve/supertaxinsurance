@@ -117,6 +117,107 @@
 										</div>
 									</div>
 								</div>
+								<div class="form-group s_website_form_field col-12 s_website_form_custom" data-name="Field" data-type="char" id="kxbiabcfnso">
+                                                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                                <label class="col-form-label col-sm-auto s_website_form_label " for="kxbiabcfnso" style="width: 200px">
+                                                                                        <span class="s_website_form_label_content">
+                                                                                                Family members *
+                                                                                        </span>
+                                                                                </label>
+                                                                                <div class="col-sm">
+                                                                                        <input class="form-control s_website_form_input" id="kxbiabcfnso" name="family_members" required="1" title="Please Enter Numbers Only" type="number"/>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+								<div class="form-group s_website_form_field col-12 s_website_form_custom" data-name="Field" data-type="char" id="kxbiabcfnso">
+                                                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                                <label class="col-form-label col-sm-auto s_website_form_label " for="kxbiabcfnso" style="width: 200px">
+                                                                                        <span class="s_website_form_label_content">
+                                                                                                Estimated Annual Income *
+                                                                                        </span>
+                                                                                </label>
+                                                                                <div class="col-sm">
+                                                                                        <input class="form-control s_website_form_input" id="kxbiabcfnso" name="estimated_annual_income" required="1" title="Please Enter Numbers Only" type="number"/>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+								<div class="form-group s_website_form_field col-12 s_website_form_custom" data-name="Field" data-type="char" id="kxbiabcfnso">
+                                                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                                <label class="col-form-label col-sm-auto s_website_form_label " for="kxbiabcfnso" style="width: 200px">
+                                                                                        <span class="s_website_form_label_content">
+                                                                                                Prior Agreed Fees
+                                                                                        </span>
+                                                                                </label>
+                                                                                <div class="col-sm">
+                                                                                        <input class="form-control s_website_form_input" id="kxbiabcfnso" name="prior_agreed_fees" required="0" title="Please Enter Numbers Only" type="number"/>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+								<div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom col-lg-6" data-name="Field" data-type="char" id="vdhbc63avj">
+                                                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                                <label class="col-form-label col-sm-auto s_website_form_label " for="vdhbc63avj" style="width: 200px">
+                                                                                        <span class="s_website_form_label_content">
+                                                                                                Start Date of Contract
+                                                                                        </span>
+                                                                                </label>
+                                                                                <div class="col-sm">
+                                                                                        <input class="form-control s_website_form_input" id="vdhbc63avj" name="start_contract_date" type="date" domain="([('start_contract_date', '=', context_today())])"/>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                                <br/>
+                                                                <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom col-lg-6" data-name="Field" data-type="char" id="jasbu73bow">
+                                                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                                <label class="col-form-label col-sm-auto s_website_form_label " for="jasbu73bow" style="width: 200px">
+                                                                                        <span class="s_website_form_label_content">
+                                                                                                Expiry Date of Contract
+                                                                                        </span>
+                                                                                </label>
+                                                                                <div class="col-sm">
+                                                                                        <input class="form-control s_website_form_input" id="jasbu73bow" name="expiry_contrat_date" type="date"/>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                                <br/>
+
+								<div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom" data-name="Field" data-type="char" id="tpdlzie70l">
+									<div class="row s_col_no_resize s_col_no_bgcolor">
+										<label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="tpdlzie70l">
+											<span class="s_website_form_label_content">
+												Employment Status
+											</span>
+										</label>
+										<div class="col-sm">
+											<select class="form-control s_website_form_input" name="employment_status">
+												<option value=""/>
+												<option value="partner">
+													Business Partner
+												</option>
+												<option value="contract1099">
+													Contract 1099
+												</option>
+												<option value="fullw2">
+													Full time W2
+												</option>
+												<option value="partw2">
+													Part time W2
+												</option>
+												<option value="self">
+													Self Employee
+												</option>
+												<option value="student">
+													Student
+												</option>
+												<option value="unemployee">
+													Unemployee
+												</option>
+												<option value="Other">
+													Other
+												</option>
+											</select>
+										</div>
+									</div>
+								</div>
 								<div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom" data-name="Field" data-type="char" id="fpqo7z5bomu">
 									<div class="row s_col_no_resize s_col_no_bgcolor">
 										<label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="fpqo7z5bomu">
