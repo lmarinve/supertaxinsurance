@@ -36,7 +36,7 @@ class HrEmployeeInherit(models.Model):
                                 ('partw2', 'Part time W2'),
                                 ('self', 'Self Employee'),
                                 ('student', 'Student'),
-                                ('unemployee', 'Unemployee')
+                                ('unemployee', 'Unemployee'),
                                 ('other', 'Other'),
                                 ])
     nature_of_job = fields.Selection([

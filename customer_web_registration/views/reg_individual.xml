@@ -90,7 +90,7 @@
 												</div>
 												<div class="radio col-12 col-lg-4 col-md-6">
 													<div class="form-check">
-														<input class="s_website_form_input form-check-input" name="gender" type="radio" value="rather not say"/>
+														<input class="s_website_form_input form-check-input" name="gender" type="radio" value="notsay"/>
 														<label class="form-check-label s_website_form_check_label">
 															Rather not say
 														</label>
