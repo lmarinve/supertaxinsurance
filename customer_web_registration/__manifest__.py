@@ -6,14 +6,14 @@
 ##############################################################################
 
 {
-    'name': "Bay Group of USA Web Registration",
+    'name': "Customer Web Registration",
     'version': '16.0.1.0',
     'license': 'OPL-1',
     'summary': """Customer Registration Form | customer registration form |
                   Customer Registration Process | customer registration process |
                   Customer Registration | customer registration""",
     'category': 'Web',
-    'description': """Bay Group of USA Registration Process""",
+    'description': """Customer  Registration Process""",
     'author': 'Compushop Service',
     'website': 'https://www.compushop.org',
     'depends': [
