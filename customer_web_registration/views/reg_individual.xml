@@ -221,7 +221,7 @@
 											</span>
 										</label>
 										<div class="col-sm">
-											<input class="form-control s_website_form_input" name="zip" pattern="[0-9]*" required="5" title="Please Enter Numbers Only" type="text" id="de5f9s72dfq"/>
+											<input class="form-control s_website_form_input" name="zip" pattern="[0-9]*" required="1" title="Please Enter Numbers Only" type="text" id="de5f9s72dfq"/>
 										</div>
 									</div>
 								</div>
