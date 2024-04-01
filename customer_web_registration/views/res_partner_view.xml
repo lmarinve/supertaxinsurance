@@ -19,11 +19,11 @@
                     <attribute name="invisible">0</attribute>              
                 </xpath>                
                 <xpath expr="//field[@name='website']" position="after">
-                    <field name='carrier_id' attrs="{'invisible':[('company_type','=','person')]}"/>
+                    <field name='course_id' attrs="{'invisible':[('company_type','=','person')]}"/>
                     <field name='no_of_employees' attrs="{'invisible':[('company_type','=','person')]}"/>
                     <field name='company_name' attrs="{'invisible':[('company_type','=','person')]}"/>
                     <field name='company_address' attrs="{'invisible':[('company_type','=','person')]}" invisible="1"/>
-                    <field name='family_members' attrs="{'invisible':[('company_type','=','person')]}"/>
+                    <field name='no_registered_employee' attrs="{'invisible':[('company_type','=','person')]}"/>
                     <field name='contract_term' attrs="{'invisible':[('company_type','=','person')]}"/>
                     <field name='start_contract_date' attrs="{'invisible':[('company_type','=','person')]}"/>
                     <field name='expiry_contrat_date' attrs="{'invisible':[('company_type','=','person')]}"/>
@@ -40,7 +40,7 @@
                     <field name='employer_name' attrs="{'invisible':[('company_type','=','company')]}"/>
                     <field name='nature_of_job' attrs="{'invisible':[('company_type','=','company')]}"/>
                     <field name='industry_segment' attrs="{'invisible':[('company_type','=','company')]}"/>
-                    <field name='interested_products' attrs="{'invisible':[('company_type','=','company')]}"/>
+                    <field name='intrested_fields' attrs="{'invisible':[('company_type','=','company')]}"/>
                     <field name='referral_name' attrs="{'invisible':[('company_type','=','company')]}"/>          
                 </xpath>                                        
             </field>

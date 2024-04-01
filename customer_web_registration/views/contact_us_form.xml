@@ -32,6 +32,17 @@
 						</div>
 					</div>
 				</section>
+				<section class="s_text_block pt32 o_colored_level pb0" data-name="Text" data-snippet="s_text_block">
+					<div class="s_allow_columns container">
+						<p>
+							Great stories have a
+							<b class="o_default_snippet_text">
+								personality
+							</b>
+							. Consider telling a great story that provides personality. Writing a story with personality for potential clients will assist with making a relationship connection. This shows up in small quirks like word choices or phrases. Write from your point of view, not from someone else's experience.
+						</p>
+					</div>
+				</section>
 				<div class="row">
 					<div class="col-2"/>
 					<div class="col-4" style="padding-right:100px; border-right: 1px solid #ccc;">
@@ -82,23 +93,17 @@
 													</label>
 													<select class="form-control s_website_form_input" id="khyyke60o4c" name="no_of_employees" required="1">
 														<option value=""/>
-														<option value="1-4">
-															1-4
+														<option value=">20">
+															>20
 														</option>
-														<option value="5-19">
-															5-19
+														<option value="20-50">
+															20-50
 														</option>
-														<option value="20-49">
-															20-49
+														<option value="50-70">
+															50-70
 														</option>
-														<option value="50-99">
-															50-99
-														</option>
-														<option value="100-499">
-															100-499
-														</option>
-														<option value="500-9999">
-															500-9999
+														<option value="70-100">
+															70-100
 														</option>
 													</select>
 												</div>
@@ -137,14 +142,14 @@
 													<label class="s_website_form_label" for="khyyke60o4c" style="width: 200px">
 														<b>
 															<span>
-																Select Carrier
+																Select Course
 															</span>
 														</b>
 													</label>
-													<select class="form-control" name="carrier_id" id="carrier_id_onchange" required="1">
+													<select class="form-control" name="course_id" id="course_id_onchange" required="1">
 														<option value=""/>
-														<t t-as="carrier_id" t-foreach="request.env['slide.channel'].search([]) or []">
-															<option t-att-value="carrier_id.id" t-esc="carrier_id.name"/>
+														<t t-as="course_id" t-foreach="request.env['slide.channel'].search([]) or []">
+															<option t-att-value="course_id.id" t-esc="course_id.name"/>
 														</t>
 													</select>
 												</div>
@@ -154,11 +159,11 @@
 													<label class="s_website_form_label" for="khyyke60o4c" style="width: 300px">
 														<b>
 															<span>
-																Family members
+																No of Employees to be registered
 															</span>
 														</b>
 													</label>
-													<input class="form-control s_website_form_input" id="khyyke60o4c" name="family_members" required="1" type="number"/>
+													<input class="form-control s_website_form_input" id="khyyke60o4c" name="no_registered_employee" required="1" type="number"/>
 												</div>
 											</div>
 											<div class="row">
@@ -172,14 +177,17 @@
 													</label>
 													<select class="form-control s_website_form_input" id="khyyke60o4c" name="contract_term" required="1">
 														<option value=""/>
-														<option value="1 time">
-															1 time
+														<option value="6 months">
+															6 Months
 														</option>
 														<option value="1 year">
 															1 Year
 														</option>
-														<option value="&gt;1 years">
-															&amp;gt;1 Years
+														<option value="2 years">
+															2 Years
+														</option>
+														<option value="&gt;2 years">
+															&amp;gt;2 Years
 														</option>
 													</select>
 												</div>
@@ -195,7 +203,7 @@
 													</label>
 													<input class="form-control s_website_form_input" id="khyyke60o4c" name="name" pattern="[a-zA-Z ]*" placeholder="Name" required="1" title="Please Enter Alphabets Only" type="text"/>
 													<br/>
-													<input class="form-control s_website_form_input" id="khyyke60o4c" name="estimated_premium" placeholder="Estimated Premium" required="true" type="text"/>
+													<input class="form-control s_website_form_input" id="khyyke60o4c" name="designation" placeholder="Designation" required="true" type="text"/>
 													<br/>
 													<input class="form-control s_website_form_input" id="khyyke60o4c" name="phone" placeholder="Phone" required="true" type="text"/>
 													<br/>
@@ -277,6 +285,26 @@
 							</div>
 							<div class="row">
 								<div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required col-lg-12 o_colored_level" data-name="Field" data-type="char"/>
+							</div>
+							<div class="row">
+								<div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required col-lg-12 o_colored_level">
+									<strong>
+										<span>
+											Follow us
+										</span>
+									</strong>
+								</div>
+							</div>
+							<div>
+								<a style="color:beige;" t-att-href="res_company.social_facebook">
+									<img class="saturate_col" style="max-height: 100%;max-width:10%%;object-fit: cover;" t-att-src="'customer_web_registration/static/description/fb.png'"/>
+								</a>
+								<a style="color:beige;" t-att-href="res_company.social_twitter">
+									<img class="saturate_col" style="max-height: 100%;max-width:10%;object-fit: cover;" t-att-src="'customer_web_registration/static/description/twitter.png'"/>
+								</a>
+								<a style="color:beige;" t-att-href="res_company.social_instagram">
+									<img class="saturate_col" style="max-height: 100%;max-width:10%;object-fit: cover;" t-att-src="'customer_web_registration/static/description/insta.png'"/>
+								</a>
 							</div>
 						</div>
 					</div>

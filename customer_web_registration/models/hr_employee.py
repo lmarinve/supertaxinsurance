@@ -16,28 +16,27 @@ class HrEmployeeInherit(models.Model):
         selection=[('person', 'Individual'), ('company', 'Company')])
     company_name = fields.Char(string='Company Name')
     no_of_employees = fields.Selection([
-                                        ('',''),
-                                        ('1-4','1-4'),
-                                        ('5-19','5-19'),
-                                        ('20-49','20-49'),
-                                        ('50-99','50-99'),
-                                        ('100-499','100-499'),
-                                        ('500-9999','500-9999')
+                                        ('',''), 
+                                        ('>20','>20'), 
+                                        ('20-50','20-50'),
+                                        ('50-70','50-70'), 
+                                        ('70-100','70-100')
                                         ])
     industry_sector = fields.Char('Industry Sector')
-    carrier_id = fields.Many2one('slide.channel', string='Select Carrier')
-    family_members = fields.Integer('Family members')
+    course_id = fields.Many2one('slide.channel', string='Select Course')
+    no_registered_employee = fields.Integer('No of Employee to be Registred')
     contract_term = fields.Selection([
-                                        ('',''),
-                                        ('1 time','1 time'),
-                                        ('1 year','1 Year'),
-                                        ('>1 years','>1 Years')
+                                        ('',''), 
+                                        ('6 months','6 Months'), 
+                                        ('1 year','1 Year'), 
+                                        ('2 Year','2 Year'), 
+                                        ('>2 years','>2 Years')
                                     ])
     susbcription_fee = fields.Char('Estimated Subscription Fee')
-    estimated_premium = fields.Char('Estimated Premium')
     prior_agreed_fees = fields.Char('Prior Agreed Fees as per contract')
     start_contract_date = fields.Date('Start Date of Contract')
     expiry_contrat_date = fields.Date('Expiry Date of Contract')
+    designation = fields.Char('Designation')
     contact_number = fields.Char('Contact Number')
     contact_name = fields.Char('Contact Name')
     compnay_name = fields.Char(string='Name')
@@ -47,7 +46,8 @@ class HrEmployeeInherit(models.Model):
     gender = fields.Selection(string='Gender', 
                             selection=[
                                         ('male', 'Male'),
-                                        ('female', 'Female')
+                                        ('female', 'Female'),
+                                        ('rather not say', 'Rather not say')
                                         ])
     nationality = fields.Many2one('res.country', string='Nationality')
     employment_status = fields.Char(string="Current Employment Status")
@@ -57,12 +57,11 @@ class HrEmployeeInherit(models.Model):
                                         ('', ''), 
                                         ('it', 'IT'), 
                                         ('retail', 'Retail'), 
-                                        ('marketing', 'Marketing'),
-                                        ('manufacture', 'Manufacture'),
+                                        ('marketing', 'Marketing'), 
                                         ('construction', 'Construction'), 
                                         ('self', 'Self')
                                     ])
-    interested_products = fields.Char(string='Interested Products')
+    intrested_fields = fields.Char(string='Interested Fields')
     referral_name = fields.Char(string='Referral’s Name')
     birthdate = fields.Date(string='Birthday')
     

@@ -15,24 +15,23 @@ class CrmLeadInherit(models.Model):
 
     company_address = fields.Text(string="Company Address")
     no_of_employees = fields.Selection([
-                                        ('', ''),
-                                        ('1-4','1-4'),
-                                        ('5-19','5-19'),
-                                        ('20-49','20-49'),
-                                        ('50-99','50-99'),
-                                        ('100-499','100-499'),
-                                        ('500-9999','500-9999')
+                                        ('', ''), 
+                                        ('>20', '>20'), 
+                                        ('20-50', '20-50'), 
+                                        ('50-70', '50-70'), 
+                                        ('70-100', '700-100')
                                         ])
-    family_members = fields.Integer(string="Family Members")
+    no_registered_employee = fields.Integer(string="Registered Employee")
     industry_sector = fields.Char(string="Industry Sector")
-    carrier_id = fields.Many2one('slide.channel', string='Select Carrier')
+    course_id = fields.Many2one('slide.channel', string='Select Course')
     contract_term = fields.Selection([
-                                    ('', ''),
-                                    ('1 time','1 time'),
-                                    ('1 year','1 Year'),
-                                    ('>1 years','>1 Years')
+                                    ('', ''), 
+                                    ('6 months', '6 Months'), 
+                                    ('1 year', '1 Year'), 
+                                    ('2 years', '2 Years'), 
+                                    ('>2 years', '>2 Years')
                                     ])
-    estimated_premium = fields.Integer(string="Estimated Premium")
+    designation = fields.Char(string="Designation")
     contact_number = fields.Char(string="Contact Number")
 
     # send mail to created lead when click on submit in contact us page

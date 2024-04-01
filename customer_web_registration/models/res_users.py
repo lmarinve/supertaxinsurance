@@ -68,13 +68,13 @@ class ResUserInherit(models.Model):
                             'company_name': result.name,
                             'no_of_employees': result.no_of_employees,
                             'industry_sector': result.industry_sector,
-                            'family_members': result.family_members,
+                            'no_registered_employee': result.no_registered_employee,
                             'contract_term': result.contract_term,
                             'susbcription_fee': result.susbcription_fee,
                             'prior_agreed_fees': result.prior_agreed_fees,
                             'start_contract_date': result.start_contract_date,
                             'expiry_contrat_date': result.expiry_contrat_date,
-                            'estimated_premium': result.estimated_premium,
+                            'designation': result.designation,
                             }
             if result.partner_id:
                 result.partner_id.email = result.login
