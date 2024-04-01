@@ -13,26 +13,45 @@ from odoo import fields, models
 class CrmLeadInherit(models.Model):
     _inherit = "crm.lead"
 
+
+    first_name = fields.Char(string='First Name')
+    last_name = fields.Char(string='Last Name')
+    gender = fields.Selection(string='Gender',
+                            selection=[
+                                        ('male', 'Male'),
+                                        ('female', 'Female'),
+                                        ('rather not say', 'Rather not say')
+                                        ])
+    nationality = fields.Many2one('res.country', string='Nationality')
+    employment_status = fields.Char(string="Employment Status")
+    employer_name = fields.Char(string='Employer Name')
+    nature_of_job = fields.Char(string='Nature of Job')
+    industry_segment = fields.Char(string="Industry Segment")
+    interested_fields = fields.Char(string='Interested Fields')
+    referral_name = fields.Char(string='Referral’s Name')
     company_address = fields.Text(string="Company Address")
     no_of_employees = fields.Selection([
-                                        ('', ''), 
-                                        ('>20', '>20'), 
-                                        ('20-50', '20-50'), 
-                                        ('50-70', '50-70'), 
-                                        ('70-100', '700-100')
+                                        ('',''),
+                                        ('1-4','1-4'),
+                                        ('5-19','5-19'),
+                                        ('20-49','20-49'),
+                                        ('50-99','50-99'),
+                                        ('100-499','100-499'),
+                                        ('500-9999','500-9999')
                                         ])
-    no_registered_employee = fields.Integer(string="Registered Employee")
-    industry_sector = fields.Char(string="Industry Sector")
-    course_id = fields.Many2one('slide.channel', string='Select Course')
+    industry_sector = fields.Char('Type of Business')
+    legal_representative = fields.Char('Legal Representative')
+    designation = fields.Char('Designation')
+    legal_number = fields.Char('Rep. Phone Number')
     contract_term = fields.Selection([
-                                    ('', ''), 
-                                    ('6 months', '6 Months'), 
-                                    ('1 year', '1 Year'), 
-                                    ('2 years', '2 Years'), 
-                                    ('>2 years', '>2 Years')
+                                        ('',''),
+                                        ('6 months','6 Months'),
+                                        ('1 year','1 Year'),
+                                        ('2 Year','2 Year'),
+                                        ('>2 years','>2 Years')
                                     ])
-    designation = fields.Char(string="Designation")
-    contact_number = fields.Char(string="Contact Number")
+    contract_from = fields.Date('Contract From')
+    contract_to = fields.Date('Contract To')
 
     # send mail to created lead when click on submit in contact us page
     def action_send_crm_mail(self, email_from=None):

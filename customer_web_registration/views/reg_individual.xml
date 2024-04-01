@@ -63,6 +63,20 @@
 										</div>
 									</div>
 								</div>
+								<div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom" data-name="Field" data-type="date" id="wppoowblfyg">
+									<div class="row s_col_no_resize s_col_no_bgcolor">
+										<label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="wppoowblfyg">
+											<span class="s_website_form_label_content">
+												Birthdate *
+											</span>
+										</label>
+										<div class="col-sm">
+											<div class="s_website_form_date input-group date" data-target-input="nearest">
+												<input data-date="" data-date-format="DD/MM/YYYY" name="birthdate" required="1" type="date" id="wppoowblfyg"/>
+											</div>
+										</div>
+									</div>
+								</div>
 								<div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom" data-name="Field" data-type="selection" id="r930uuel4ss">
 									<div class="row s_col_no_resize s_col_no_bgcolor">
 										<label class="col-sm-auto s_website_form_label" style="width: 200px" for="r930uuel4ss">
@@ -195,7 +209,19 @@
 											</span>
 										</label>
 										<div class="col-sm">
-											<input class="form-control s_website_form_input" name="intrested_fields" type="text" id="vcjas623jhv"/>
+											<input class="form-control s_website_form_input" name="interested_fields" type="text" id="vcjas623jhv"/>
+										</div>
+									</div>
+								</div>
+								<div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-name="Field" data-type="char" id="de5f9s72dfq">
+									<div class="row s_col_no_resize s_col_no_bgcolor">
+										<label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="de5f9s72dfq">
+											<span class="s_website_form_label_content">
+												ZIP Code *
+											</span>
+										</label>
+										<div class="col-sm">
+											<input class="form-control s_website_form_input" name="zip" pattern="[0-9]*" required="5" title="Please Enter Numbers Only" type="text" id="de5f9s72dfq"/>
 										</div>
 									</div>
 								</div>
@@ -266,20 +292,6 @@
 										</label>
 										<div class="col-sm">
 											<input class="form-control s_website_form_input" name="referral_name" type="text" id="pdmxc4actq"/>
-										</div>
-									</div>
-								</div>
-								<div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom" data-name="Field" data-type="date" id="wppoowblfyg">
-									<div class="row s_col_no_resize s_col_no_bgcolor">
-										<label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="wppoowblfyg">
-											<span class="s_website_form_label_content">
-												Birthdate *
-											</span>
-										</label>
-										<div class="col-sm">
-											<div class="s_website_form_date input-group date" data-target-input="nearest">
-												<input data-date="" data-date-format="DD/MM/YYYY" name="birthdate" required="1" type="date" id="wppoowblfyg"/>
-											</div>
 										</div>
 									</div>
 								</div>

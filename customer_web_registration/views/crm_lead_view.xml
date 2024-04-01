@@ -11,13 +11,14 @@
             <xpath expr="//field[@name='lang_id']" position="after">
                 <field name="no_of_employees"/>
                 <field name="industry_sector"/>
-                <field name='course_id'/>
             </xpath>
             <xpath expr="//field[@name='email_cc']" position="after">
+                <field name='legal_representative'/>
                 <field name='designation'/>
-                <field name='contact_number'/>
-                <field name='no_registered_employee'/>
+                <field name='legal_number'/>
                 <field name='contract_term'/>
+                <field name='contract_from'/>
+                <field name='contract_to'/>
             </xpath>
         </field>
     </record>

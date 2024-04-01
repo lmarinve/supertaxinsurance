@@ -48,7 +48,7 @@ class ResUserInherit(models.Model):
                 result.employee_id.update({
                                             'work_email': result.login,
                                             'birthday': result.birthdate,
-                                            'phone': result.contact_number,
+                                            'phone': result.phone,
                                             'country_of_birth': result.country_id.id,
                                             })
             if not self.env.context.get('no_reset_password'):
@@ -68,13 +68,11 @@ class ResUserInherit(models.Model):
                             'company_name': result.name,
                             'no_of_employees': result.no_of_employees,
                             'industry_sector': result.industry_sector,
-                            'no_registered_employee': result.no_registered_employee,
-                            'contract_term': result.contract_term,
-                            'susbcription_fee': result.susbcription_fee,
-                            'prior_agreed_fees': result.prior_agreed_fees,
-                            'start_contract_date': result.start_contract_date,
-                            'expiry_contrat_date': result.expiry_contrat_date,
+                            'legal_representative': result.legal_representative,
+                            'legal_number': result.legal_number,
                             'designation': result.designation,
+                            'contract_from': result.contract_from,
+                            'contrat_to': result.contrat_to,
                             }
             if result.partner_id:
                 result.partner_id.email = result.login
@@ -83,7 +81,7 @@ class ResUserInherit(models.Model):
                 company_vals.update({   
                                         'user_id': result.id, 
                                         'work_email': result.login,
-                                        'phone': result.contact_number,
+                                        'phone': result.legal_number,
                                     })
             result.employee_id.create(company_vals)
 

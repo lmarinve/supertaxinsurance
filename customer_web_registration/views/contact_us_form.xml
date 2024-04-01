@@ -69,6 +69,23 @@
 													</div>
 												</div>
 											</div>
+											<div class="row">
+                                                                                                <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required col-lg-12 o_colored_level" data-name="Field" data-type="many2one" id="khyyke60o4c">
+                                                                                                        <label class="s_website_form_label" for="khyyke60o4c" style="width: 200px">
+                                                                                                                <b>
+                                                                                                                        <span>
+                                                                                                                                Country
+                                                                                                                        </span>
+                                                                                                                </b>
+                                                                                                        </label>
+                                                                                                        <select class="form-control" name="country_id" id="country_id_onchange" required="1">
+                                                                                                                <option value=""/>
+                                                                                                                <t t-as="country_id" t-foreach="request.env['res.country'].search([]) or []">
+                                                                                                                        <option t-att-value="country_id.id" t-esc="country_id.name"/>
+                                                                                                                </t>
+                                                                                                        </select>
+                                                                                                </div>
+                                                                                        </div>
 											<div class="mb-0 py-2 col-12 s_website_form_field s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
 												<div class="row s_col_no_resize s_col_no_bgcolor">
 													<div class="col-sm">
