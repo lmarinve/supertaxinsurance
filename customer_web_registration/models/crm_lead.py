@@ -16,6 +16,8 @@ class CrmLeadInherit(models.Model):
 
     first_name = fields.Char(string='First Name')
     last_name = fields.Char(string='Last Name')
+    birthdate = fields.Date(string='Birthday')
+    phone = fields.Char(string='Phone')
     gender = fields.Selection(string='Gender',
                             selection=[
                                         ('male', 'Male'),
@@ -29,7 +31,7 @@ class CrmLeadInherit(models.Model):
     industry_segment = fields.Char(string="Industry Segment")
     interested_fields = fields.Char(string='Interested Fields')
     referral_name = fields.Char(string='Referral’s Name')
-    company_address = fields.Text(string="Company Address")
+    street = fields.Text(string="Street")
     no_of_employees = fields.Selection([
                                         ('',''),
                                         ('1-4','1-4'),

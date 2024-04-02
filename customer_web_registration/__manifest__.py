@@ -19,7 +19,6 @@
     'depends': [
                 'base', 
                 'website',
-                'website_slides', 
                 'website_crm', 
                 'crm',
                 'hr',

@@ -69,48 +69,6 @@
 													</div>
 												</div>
 											</div>
-											<div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-name="Field" data-type="char" id="de5f9s72dfq">
-                                                                        			<div class="row s_col_no_resize s_col_no_bgcolor">
-                                                                                			<label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="de5f9s72dfq">
-                                                                                        			<span class="s_website_form_label_content">
-                                                                                                			ZIP Code *
-                                                                                        			</span>
-                                                                                			</label>
-                                                                                			<div class="col-sm">
-                                                                                        			<input class="form-control s_website_form_input" name="zip" pattern="[0-9]*" required="1" title="Please Enter Numbers Only" type="text" id="de5f9s72dfq"/>
-                                                                                			</div>
-                                                                        			</div>
-                                                                			</div>
-                                                                			<div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom   " data-name="Field" data-type="many2one" id="bscs72ko">
-                                                                        			<div class="row s_col_no_resize s_col_no_bgcolor">
-                                                                                			<label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="bscs72ko">
-                                                                                        			<span class="s_website_form_label_content">
-                                                                                                			State of Residence
-                                                                                        			</span>
-                                                                                			</label>
-                                                                                			<div class="col-sm">
-                                                                                        			<select class="form-control" name="state_id" id="bscs72ko">
-                                                                                                			<option value=""/>
-                                                                                                 			<t t-as="state_id" t-foreach="request.env['res.country.state'].search([]) or []">
-                                                                                                        			<option t-att-value="state_id.id" t-esc="state_id.name"/>
-                                                                                                			</t>
-                                                                                        			</select>
-                                                                                			</div>
-                                                                        			</div>
-                                                                			</div>
-											<div class="row">
-                                                                                                <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required col-lg-12 o_colored_level" data-name="Field" data-type="many2one" id="khyyke60o4c">
-                                                                                                        <label class="s_website_form_label" for="khyyke60o4c" style="width: 200px">
-                                                                                                                <span>Country</span>
-                                                                                                        </label>
-                                                                                                        <select class="form-control" name="country_id" id="country_id_onchange" required="1">
-                                                                                                                <option value=""/>
-                                                                                                                <t t-as="country_id" t-foreach="request.env['res.country'].search([]) or []">
-                                                                                                                        <option t-att-value="country_id.id" t-esc="country_id.name"/>
-                                                                                                                </t>
-                                                                                                        </select>
-                                                                                                </div>
-                                                                                        </div>
 											<div class="mb-0 py-2 col-12 s_website_form_field s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
 												<div class="row s_col_no_resize s_col_no_bgcolor">
 													<div class="col-sm">
@@ -135,13 +93,6 @@
 							</div>
 						</section>
 					</div>
-					<div class="col-lg-4 mt-4 mt-lg-0">
-                                	    <ul class="list-unstyled mb-0 ps-2">
-                                    		<li><i class="fa fa-map-marker fa-fw me-2"/><span class="o_force_ltr">2980 NE 207th ST - Suite 343</span></li>
-                                    		<li><i class="fa fa-phone fa-fw me-2"/><span class="o_force_ltr">+1 (305) 555-0111</span></li>
-                                    		<li><i class="fa fa-1x fa-fw fa-envelope me-2"/><span>info@baygroup.com</span></li>
-                                	    </ul>
-                            		</div>
 				    </div>
 				</div>
 			    </section>
