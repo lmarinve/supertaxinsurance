@@ -20,11 +20,8 @@ class ContactUsLead(http.Controller):
                 "company_id": http.request.env.user.company_id.id,
                 "email_from": kw.get("email_from"),
                 "name": "Inquiry",
-                "description" : kw.get('description'),
                 "type": 'lead',
                 "contact_name": kw.get("name"),
-                "phone": kw.get("phone"),
-                'partner_name': kw.get('company_name'),
                 }
         lead_length = request.env["crm.lead"].sudo().create(vals)
         email_from = request.env.user.login
@@ -63,8 +60,9 @@ class AuthSignupRegistration(AuthSignupHome):
             "name": kw.get('first_name'),
             "first_name": kw.get('first_name'),
             "last_name": kw.get('last_name'),
-            "birthdate": kw.get('Birthday'),
+            "email": kw.get('login'),
             "phone": kw.get('contact_number'),
+            "birthdate": kw.get('birthday'),
             "gender": kw.get('gender'),
             "nationality": int(nationality) if nationality else False,
             "company_type": kw.get('company_type'),
@@ -77,8 +75,8 @@ class AuthSignupRegistration(AuthSignupHome):
             "street": kw.get("Street"),
             "state_id": int(state_id) if state_id else False,
             "country_id": int(country_id) if country_id else False,
-            'email': kw.get('login'),
-            'comment': kw.get('description'),
+            "zip": kw.get('zip'),
+            "comment": kw.get('description'),
         }
         request.env["res.users"].sudo().create(vals)
         return request.render("customer_web_registration.registration_thankyou")
@@ -88,24 +86,23 @@ class AuthSignupRegistration(AuthSignupHome):
     def submitted_company_user(self, **kw):
         vals = {
             "parent_id": kw.get('parent_id'),
-            "login": kw.get("login"),
-            'email': kw.get('login'),
-            'phone': kw.get('contact_number'),
             "name": kw.get("company_name"),
-            'company_name': kw.get('company_name'),
-            'street': kw.get('street'),
-            'country_id': int(kw.get('country_id')),
-            'company_type': kw.get('company_type'),
-            'no_of_employees': kw.get('no_of_employees'),
-            'industry_sector': kw.get('industry_sector'),
-            'legal_representative': kw.get('legal_representative'),
-            'designation': kw.get('designation'),
-            'legal_number': kw.get('legal_number'),
-            'contract_term': kw.get('contract_term'),
-            'contact_number': kw.get("contact_number"),
-            'contract_from': kw.get('contract_from') or str(datetime.datetime.now().date()),
-            'contract_to': kw.get('contract_to') or str(datetime.datetime.now().date()),
-            'comment': kw.get('description'),        
+            "company_name": kw.get('company_name'),
+            "email": kw.get('login'),
+            "phone": kw.get('contact_number'),
+            "no_of_employees": kw.get('no_of_employees'),
+            "industry_sector": kw.get('industry_sector'),
+            "legal_representative": kw.get('legal_representative'),
+            "designation": kw.get('designation'),
+            "legal_number": kw.get('legal_number'),
+            "contract_term": kw.get('contract_term'),
+            "contract_from": kw.get('contract_from') or str(datetime.datetime.now().date()),
+            "contract_to": kw.get('contract_to') or str(datetime.datetime.now().date()),
+            "street": kw.get('street'),
+            "state_id": int(state_id) if state_id else False,
+            "country_id": int(kw.get('country_id')),
+            "zip": kw.get('zip'),
+            "comment": kw.get('description'),
             }
         request.env["res.users"].sudo().create(vals)
         return request.render("customer_web_registration.registration_thankyou")
