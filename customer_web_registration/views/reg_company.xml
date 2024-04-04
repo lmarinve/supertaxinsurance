@@ -7,12 +7,24 @@
 				<section class="s_title pt32" data-name="Title" data-original-id="1251" data-resize-width="1920" data-snippet="s_title" data-vcss="001">
 					<div class="s_allow_columns container">
 						<h1>
-							<font class="text-center" style="font-size: 35px;">
+						<p style="text-align: center; ">
+							<font style="font-size: 36px;">
 								<b>
-									Registration
+									CUSTOMER APPLICATION FORM
 								</b>
 							</font>
+						</p>
 						</h1>
+						<p>
+							<font class="text-center" style="font-size: 24px;">
+								<p>
+									Dear valued customer, Please complete the information requested below in order to set up your profile as customer
+								</p>
+								<p>
+									*** all fields are required ***
+								</p>
+							</font>
+						</p>
 					</div>
 				</section>
 				<section class="s_website_form pt16 pb16 o_colored_level" data-name="Form" data-snippet="s_website_form" data-vcss="001">
@@ -35,32 +47,187 @@
 									</p>
 								</div>
 							</section>
-							<br/>
 							<div class="s_website_form_rows row s_col_no_bgcolor">
-								<div class="form-group s_website_form_field col-12 s_website_form_custom col-lg-6" id="inquiry_div"/>
-								<div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-name="Field" data-type="char" id="mph62d0lw8">
+								<div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom s_website_form_required" data-name="Field" data-type="char" id="mph62d0lw8">
 									<div class="row s_col_no_resize s_col_no_bgcolor">
 										<label class="col-form-label col-sm-auto s_website_form_label" for="mph62d0lw8" style="width: 200px">
 											<span class="s_website_form_label_content">
-												Company Name *
+												Legal Name
 											</span>
 										</label>
 										<div class="col-sm">
-											<input class="form-control s_website_form_input" id="mph62d0lw8" name="company_name" pattern="[a-zA-Z ]*" required="1" title="Please Enter Alphabets Only" type="text"/>
+											<input class="form-control s_website_form_input" id="mph62d0lw8" name="company_name" pattern="[a-zA-Z ]*" required="1" title="Please Enter Alphabets Only" type="char"/>
+										</div>
+									</div>
+								</div>
+								<div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom s_website_form_required" data-name="Field" data-type="char" id="mph62d0lw8">
+									<div class="row s_col_no_resize s_col_no_bgcolor">
+										<label class="col-form-label col-sm-auto s_website_form_label" for="mph62d0lw8" style="width: 200px">
+											<span class="s_website_form_label_content">
+												Trading Name
+											</span>
+										</label>
+										<div class="col-sm">
+											<input class="form-control s_website_form_input" id="mph62d0lw8" name="company_dba" pattern="[a-zA-Z ]*" required="1" title="Please Enter Alphabets Only" type="char"/>
 										</div>
 									</div>
 								</div>
 								<br/>
-								<div class="form-group s_website_form_field col-12 col-lg-11 s_website_form_custom" data-name="Field" data-type="email" id="leesgs3fz4p">
+								<div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom s_website_form_required" data-name="Field" data-type="char" id="de5f9s72dff">
+                                                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                                <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="de5f9s72dff">
+                                                                                        <span class="s_website_form_label_content">
+												Tax ID/VAT
+                                                                                        </span>
+                                                                                </label>
+                                                                                <div class="col-sm">
+                                                                                        <input class="form-control s_website_form_input" name="vat" pattern="[0-9]*" required="1" title="Please Enter Numbers Only" type="char" id="de5f9s72dff"/>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+								<div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom col-lg-6" data-name="Field" data-type="char" id="jasbu73boo">
 									<div class="row s_col_no_resize s_col_no_bgcolor">
-										<label class="col-form-label col-sm-auto s_website_form_label" for="leesgs3fz4p" style="width: 200px">
+										<label class="col-form-label col-sm-auto s_website_form_label " for="jasbu73boo" style="width: 200px">
 											<span class="s_website_form_label_content">
-												Email Address *
+												Registered
 											</span>
 										</label>
 										<div class="col-sm">
-											<input class="form-control s_website_form_input" id="login" name="login" placeholder="" required="1" type="email"/>
+											<input class="form-control s_website_form_input" id="jasbu73boo" name="incorporated_date" type="date"/>
 										</div>
+									</div>
+								</div>
+								<br/>
+								<div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-name="Field" data-type="char" id="wac861iw3un">
+								 	<div class="row s_col_no_resize s_col_no_bgcolor">
+								 		<label class="col-form-label col-sm-auto s_website_form_label " for="wac861iw3un" style="width: 200px">
+								 			<span class="s_website_form_label_content">
+								 				Company Address
+								 			</span>
+								 		</label>
+								 		<div class="col-sm">
+								 			<input class="form-control s_website_form_input" id="wac861iw3un" name="street" placeholder="" required="1"/>
+								 		</div>
+								 	</div>
+								</div>
+								<div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom   " data-name="Field" data-type="many2one" id="bscs72ko">
+                                                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                                <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="bscs72ko">
+                                                                                        <span class="s_website_form_label_content">
+                                                                                                State
+                                                                                        </span>
+                                                                                </label>
+                                                                                <div class="col-sm">
+                                                                                        <select class="form-control" name="state_id" id="bscs72ko">
+                                                                                                <option value=""/>
+                                                                                                 <t t-as="state_id" t-foreach="request.env['res.country.state'].search([]) or []">
+                                                                                                        <option t-att-value="state_id.id" t-esc="state_id.name"/>
+                                                                                                </t>
+                                                                                        </select>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+								<div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom" data-name="Field" data-type="char" id="c63pr9w5c5g">
+									<div class="row s_col_no_resize s_col_no_bgcolor">
+										<label class="col-form-label col-sm-auto s_website_form_label " for="c63pr9w5c5g" style="width: 200px">
+											<span class="s_website_form_label_content">
+												Country
+											</span>
+										</label>
+										<div class="col-sm">
+											<select class="form-control" name="country_id" id="country_id_onchange" required="1">
+												<option value=""></option>
+												<t t-as="country_id" t-foreach="request.env['res.country'].search([]) or []">
+													<option t-att-value="country_id.id" t-esc="country_id.name"/>
+												</t>
+											</select>
+										</div>
+									</div>
+								</div>
+								<br/>
+								<div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom s_website_form_required" data-name="Field" data-type="char" id="de5f9s72dfq">
+                                                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                                <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="de5f9s72dfq">
+                                                                                        <span class="s_website_form_label_content">
+                                                                                                ZIP Code
+                                                                                        </span>
+                                                                                </label>
+                                                                                <div class="col-sm">
+                                                                                        <input class="form-control s_website_form_input" name="zip" pattern="[0-9]*" required="1" title="Please Enter Numbers Only" type="text" id="de5f9s72dfq"/>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+								<br/>
+								<div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom" data-name="Field" data-type="char" id="kxbipzmfnso">
+									<div class="row s_col_no_resize s_col_no_bgcolor">
+										<label class="col-form-label col-sm-auto s_website_form_label " for="kxbipzmfnso" style="width: 200px">
+											<span class="s_website_form_label_content">
+												Type of Business
+											</span>
+										</label>
+										<div class="col-sm">
+											<input class="form-control s_website_form_input" id="kxbipzmfnso" name="industry_sector" placeholder="" type="text" required="1"/>
+										</div>
+									</div>
+								</div>
+								<br/>
+								<div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom col-lg-12" data-name="Field" data-type="char" id="50u6nr8im5dls">
+									<div class="row s_col_no_resize s_col_no_bgcolor">
+										<label class="col-form-label col-sm-auto s_website_form_label " for="50u6nr8im5dls" style="width: 200px">
+											<span class="s_website_form_label_content">
+												Legal Representative
+											</span>
+										</label>
+										<div class="col-sm">
+											<input class="form-control s_website_form_input" id="name" name="legal_representative" pattern="[a-zA-Z ]*" required="1" title="Please Enter Alphabets Only" type="char"/>
+										</div>
+									</div>
+								</div>
+								<div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom" data-name="Field" data-type="char" id="kn6ol6bkha">
+									<div class="row s_col_no_resize s_col_no_bgcolor">
+										<label class="col-form-label col-sm-auto s_website_form_label " for="kn6ol6bkha" style="width: 200px">
+											<span class="s_website_form_label_content">
+												Designation
+											</span>
+										</label>
+										<div class="col-sm">
+											<input class="form-control s_website_form_input" id="kn6ol6bkha" name="designation" pattern="[a-zA-Z ]*" placeholder="" required="1" title="Please Enter Alphabets Only" type="char"/>
+										</div>
+									</div>
+								</div>
+								<br/>
+								<div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom" data-name="Field" data-type="char" id="bt2ecs7fdb5">
+									<div class="row s_col_no_resize s_col_no_bgcolor">
+										<label class="col-form-label col-sm-auto s_website_form_label " for="bt2ecs7fdb5" style="width: 200px">
+											<span class="s_website_form_label_content">
+												Phone No.
+											</span>
+										</label>
+										<div class="col-sm">
+											<input class="form-control s_website_form_input" id="bt2ecs7fdb5" name="legal_number" placeholder="" type="char" required="1"/>
+										</div>
+									</div>
+								</div>
+								<div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom" data-name="Field" data-type="char" id="kn6ol6bkhh">
+									<div class="row s_col_no_resize s_col_no_bgcolor">
+										<label class="col-form-label col-sm-auto s_website_form_label " for="kn6ol6bkhh" style="width: 200px">
+											<span class="s_website_form_label_content">
+												Website
+											</span>
+										</label>
+										<div class="col-sm">
+											<input class="form-control s_website_form_input" id="kn6ol6bkhh" name="designation" pattern="[a-zA-Z. ]*" placeholder="" required="1" title="Please Enter Alphabets Only" type="char"/>
+										</div>
+									</div>
+								</div>
+								<br/>
+								<div class="form-group s_website_form_field col-12 col-lg-5 s_website_form_custom col-lg-12" data-name="Field" data-type="char" id="ae7rhibv80p">
+									<div class="row s_col_no_resize s_col_no_bgcolor">
+										<label class="col-form-label col-sm-auto s_website_form_label " for="ae7rhibv80p" style="width: 200px">
+											<span class="s_website_form_label_content">
+												Contact Information:
+											</span>
+										</label>
 									</div>
 								</div>
 								<br/>
@@ -77,7 +244,20 @@
 									</div>
 								</div>
 								<br/>
-								<div class="form-group s_website_form_field col-12 s_website_form_custom" data-name="Field" data-type="selection" id="weibh1m8ztk">
+								<div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom" data-name="Field" data-type="email" id="leesgs3fz4p">
+									<div class="row s_col_no_resize s_col_no_bgcolor">
+										<label class="col-form-label col-sm-auto s_website_form_label" for="leesgs3fz4p" style="width: 200px">
+											<span class="s_website_form_label_content">
+												Email Address
+											</span>
+										</label>
+										<div class="col-sm">
+											<input class="form-control s_website_form_input" id="login" name="login" placeholder="" required="1" type="email"/>
+										</div>
+									</div>
+								</div>
+								<br/>
+								<div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom" data-name="Field" data-type="selection" id="weibh1m8ztk">
 									<div class="row s_col_no_resize s_col_no_bgcolor">
 										<label class="col-form-label col-sm-auto s_website_form_label " for="weibh1m8ztk" style="width: 200px">
 											<span class="s_website_form_label_content">
@@ -112,69 +292,7 @@
 										</div>
 									</div>
 								</div>
-								<br/>
-								<div class="form-group s_website_form_field col-12 s_website_form_custom" data-name="Field" data-type="char" id="kxbipzmfnso">
-									<div class="row s_col_no_resize s_col_no_bgcolor">
-										<label class="col-form-label col-sm-auto s_website_form_label " for="kxbipzmfnso" style="width: 200px">
-											<span class="s_website_form_label_content">
-												Type of Business
-											</span>
-										</label>
-										<div class="col-sm">
-											<input class="form-control s_website_form_input" id="kxbipzmfnso" name="industry_sector" placeholder="" type="text" required="1"/>
-										</div>
-									</div>
-								</div>
-								<br/>
-								<div class="form-group s_website_form_field col-12 col-lg-5 s_website_form_custom col-lg-12" data-name="Field" data-type="char" id="ae7rhibv80p">
-									<div class="row s_col_no_resize s_col_no_bgcolor">
-										<label class="col-form-label col-sm-auto s_website_form_label " for="ae7rhibv80p" style="width: 359px">
-											<span class="s_website_form_label_content">
-												Contact Details of the Responsible Person:
-											</span>
-										</label>
-									</div>
-								</div>
-								<div class="form-group s_website_form_field col-12 s_website_form_custom col-lg-12" data-name="Field" data-type="char" id="50u6nr8im5dls">
-									<div class="row s_col_no_resize s_col_no_bgcolor">
-										<label class="col-form-label col-sm-auto s_website_form_label " for="50u6nr8im5dls" style="width: 200px">
-											<span class="s_website_form_label_content">
-												Legal Representative *
-											</span>
-										</label>
-										<div class="col-sm">
-											<input class="form-control s_website_form_input" id="name" name="legal_representative" pattern="[a-zA-Z ]*" required="1" title="Please Enter Alphabets Only" type="text"/>
-										</div>
-									</div>
-								</div>
-								<br/>
-								<div class="form-group s_website_form_field col-12 s_website_form_custom" data-name="Field" data-type="char" id="kn6ol6bkha">
-									<div class="row s_col_no_resize s_col_no_bgcolor">
-										<label class="col-form-label col-sm-auto s_website_form_label " for="kn6ol6bkha" style="width: 200px">
-											<span class="s_website_form_label_content">
-												Designation *
-											</span>
-										</label>
-										<div class="col-sm">
-											<input class="form-control s_website_form_input" id="kn6ol6bkha" name="designation" pattern="[a-zA-Z ]*" placeholder="" required="1" title="Please Enter Alphabets Only" type="text"/>
-										</div>
-									</div>
-								</div>
-								<br/>
-								<div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom" data-name="Field" data-type="char" id="bt2ecs7fdb5">
-									<div class="row s_col_no_resize s_col_no_bgcolor">
-										<label class="col-form-label col-sm-auto s_website_form_label " for="bt2ecs7fdb5" style="width: 200px">
-											<span class="s_website_form_label_content">
-												Rep. Phone No.
-											</span>
-										</label>
-										<div class="col-sm">
-											<input class="form-control s_website_form_input" id="bt2ecs7fdb5" name="legal_number" placeholder="" type="char" required="1"/>
-										</div>
-									</div>
-								</div>
-								<br/>
-								<div class="form-group s_website_form_field col-12 s_website_form_custom" data-name="Field" data-type="char" id="50u6nr8im5Sp">
+								<div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom" data-name="Field" data-type="char" id="50u6nr8im5Sp">
 									<div class="row s_col_no_resize s_col_no_bgcolor">
 										<label class="col-form-label col-sm-auto s_website_form_label " for="50u6nr8im5Sp" style="width: 200px">
 											<span class="s_website_form_label_content">
@@ -205,7 +323,7 @@
 									<div class="row s_col_no_resize s_col_no_bgcolor">
 										<label class="col-form-label col-sm-auto s_website_form_label " for="vdhbc63avj" style="width: 200px">
 											<span class="s_website_form_label_content">
-												Start Date of Contract
+												Contract Start
 											</span>
 										</label>
 										<div class="col-sm">
@@ -213,12 +331,11 @@
 										</div>
 									</div>
 								</div>
-								<br/>
 								<div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom col-lg-6" data-name="Field" data-type="char" id="jasbu73bow">
 									<div class="row s_col_no_resize s_col_no_bgcolor">
 										<label class="col-form-label col-sm-auto s_website_form_label " for="jasbu73bow" style="width: 200px">
 											<span class="s_website_form_label_content">
-												Expiry Date of Contract
+												Contract Expiry
 											</span>
 										</label>
 										<div class="col-sm">
@@ -227,68 +344,9 @@
 									</div>
 								</div>
 								<br/>
-								<div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-name="Field" data-type="char" id="wac861iw3un">
-								 	<div class="row s_col_no_resize s_col_no_bgcolor">
-								 		<label class="col-form-label col-sm-auto s_website_form_label " for="wac861iw3un" style="width: 200px">
-								 			<span class="s_website_form_label_content">
-								 				Company Address
-								 			</span>
-								 		</label>
-								 		<div class="col-sm">
-								 			<textarea class="form-control s_website_form_input" id="wac861iw3un" name="street" placeholder="" required="1"/>
-								 		</div>
-								 	</div>
-								</div>
-								<br/>
-								<div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom   " data-name="Field" data-type="many2one" id="bscs72ko">
-                                                                        <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                                                <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="bscs72ko">
-                                                                                        <span class="s_website_form_label_content">
-                                                                                                State
-                                                                                        </span>
-                                                                                </label>
-                                                                                <div class="col-sm">
-                                                                                        <select class="form-control" name="state_id" id="bscs72ko">
-                                                                                                <option value=""/>
-                                                                                                 <t t-as="state_id" t-foreach="request.env['res.country.state'].search([]) or []">
-                                                                                                        <option t-att-value="state_id.id" t-esc="state_id.name"/>
-                                                                                                </t>
-                                                                                        </select>
-                                                                                </div>
-                                                                        </div>
+								<div class="col-12 col-lg-4 col-lg-6">
                                                                 </div>
-								<div class="form-group s_website_form_field col-12 s_website_form_custom" data-name="Field" data-type="char" id="c63pr9w5c5g">
-									<div class="row s_col_no_resize s_col_no_bgcolor">
-										<label class="col-form-label col-sm-auto s_website_form_label " for="c63pr9w5c5g" style="width: 200px">
-											<span class="s_website_form_label_content">
-												Country *
-											</span>
-										</label>
-										<div class="col-sm">
-											<select class="form-control" name="country_id" id="country_id_onchange" required="1">
-												<option value=""></option>
-												<t t-as="country_id" t-foreach="request.env['res.country'].search([]) or []">
-													<option t-att-value="country_id.id" t-esc="country_id.name"/>
-												</t>
-											</select>
-										</div>
-									</div>
-								</div>
-								<br/>
-								<div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-name="Field" data-type="char" id="de5f9s72dfq">
-                                                                        <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                                                <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="de5f9s72dfq">
-                                                                                        <span class="s_website_form_label_content">
-                                                                                                ZIP Code *
-                                                                                        </span>
-                                                                                </label>
-                                                                                <div class="col-sm">
-                                                                                        <input class="form-control s_website_form_input" name="zip" pattern="[0-9]*" required="1" title="Please Enter Numbers Only" type="text" id="de5f9s72dfq"/>
-                                                                                </div>
-                                                                        </div>
-                                                                </div>
-								<br/>
-								<div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom col-lg-6" data-name="Field" data-type="char" id="slvbo83jdo">
+								<div class="form-group s_website_form_field col-12 s_website_form_custom col-lg-6" data-name="Field" data-type="char" id="slvbo83jdo">
 									<div class="row s_col_no_resize s_col_no_bgcolor">
 										<label class="col-form-label col-sm-auto s_website_form_label " for="slvbo83jdo" style="width: 200px">
 											<span class="s_website_form_label_content">
@@ -301,13 +359,11 @@
 									</div>
 								</div>
 								<div class="col-12 col-lg-4 col-lg-6">
-								</div>
-								<div class="col-12 col-lg-4 col-lg-6">
-									<br/>
-									<br/>
-								</div>
-								<div class="col-12 col-lg-4 col-lg-6">
-								</div>
+                                                                </div>
+                                                                <div class="col-12 col-lg-4 col-lg-6">
+                                                                        <br/>
+                                                                        <br/>
+                                                                </div>
 								<div class="form-group col-12 text-center">
 									<div class="col-12 s_website_form_submit">
 										<button class="btn btn-primary btn-lg" style="width: 230px !important;">

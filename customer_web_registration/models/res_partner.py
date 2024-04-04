@@ -34,6 +34,11 @@ class ResPartner(models.Model):
     referral_name = fields.Char(string='Referral’s Name')
 
     #company registration form fields
+    company_dba = fields.Char(string='First Name')
+    incorporated_date = fields.Date('Incorporated')
+    legal_representative = fields.Char('Legal Representative')
+    designation = fields.Char('Designation')
+    legal_number = fields.Char('Rep. Phone Number')
     no_of_employees = fields.Selection([
                                         ('',''),
                                         ('1-4','1-4'),
@@ -45,9 +50,6 @@ class ResPartner(models.Model):
                                         ('10000-100000','10000-100000')
                                         ])
     industry_sector = fields.Char('Type of Business')
-    legal_representative = fields.Char('Legal Representative')
-    designation = fields.Char('Designation')
-    legal_number = fields.Char('Rep. Phone Number')
     contract_term = fields.Selection([
                                         ('',''),
                                         ('6 months','6 Months'),

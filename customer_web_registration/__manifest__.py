@@ -33,7 +33,7 @@
             'views/reg_individual.xml',
             'views/reg_thankyou.xml',
             'views/res_partner_view.xml',
-            #'views/website_view.xml',
+            'views/website_view.xml',
             ],
     'assets':{
             'web.assets_frontend': [

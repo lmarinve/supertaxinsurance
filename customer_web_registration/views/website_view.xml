@@ -8,7 +8,7 @@
                 </a>
                 <t t-if="not request.session.uid">
                     <a class="nav-link fw-bold" role="button" t-attf-href="/web/signup/individual?{{ keep_query() }}">
-                        Sign Up
+                        Registration
                     </a>
                 </t>
             </xpath>
