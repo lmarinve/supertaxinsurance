@@ -1,0 +1,126 @@
+/* Copyright (c) 2016-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) */
+/* See LICENSE file for full copyright and licensing details. */
+/* License URL : https://store.webkul.com/license.html/ */
+
+.oe_adv_signup_form label, .oe_adv_login_form label{
+    margin-bottom: 2px;
+}
+.oe_adv_signup_form .form-group, .oe_adv_login_form .form-group{
+    margin-bottom: 2%;
+}
+.oe_adv_signup_form .form-control{
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    border-radius: 2px;
+}
+.oe_adv_login_form, .oe_adv_signup_form, .oe_adv_reset_password_form {
+    max-width: 500px;
+    position: relative;
+    margin: 25px;
+    color:#525252;
+}
+
+.oe_adv_login_form > .alert-danger, .oe_adv_signup_form > .alert-danger, .oe_adv_reset_password_form > .alert-danger {
+    font-size: 14px;
+    color: #F28617;
+    background: #FFE9D2;
+    border-radius: 2px;
+    padding: 1.5%;
+}
+.oe_adv_login_form > .alert-danger::before, .oe_adv_signup_form > .alert-danger::before, .oe_adv_reset_password_form > .alert-danger::before {
+    content: url(/advance_signup/static/src/img/alert-icon.png);
+    display: inline-block;
+    vertical-align: middle;
+    width: 23px;
+    height: 23px;
+}
+
+main .oe_website_adv_login_container {
+    width: 550px;
+    margin: 6% auto;
+    box-shadow: 0 0 5px 2px rgba(203,203,203,0.50);
+}
+@media screen and (max-width: 600px) {
+    main .oe_website_adv_login_container {
+        width: 300px;
+    }
+}
+@media screen and (max-width: 992) {
+    main .oe_website_adv_login_container {
+        width: 300px;
+    }
+}
+.adv_signup_loader{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(/advance_signup/static/src/img/adv_signup_loader.gif) center no-repeat rgba(255, 255, 255, 0.5);
+    text-shadow: 0 1px 1px white;
+}
+
+.adv_form_content p{
+    margin-bottom: 0;
+}
+
+.adv_form_content > h4{
+    font-weight: bold;
+    color: #5c5c5c;
+}
+
+.adv_signup_button{
+    background-color: #4170f0;
+    color: white;
+    border-radius: 2px;
+    font-size: 14px;
+    width: 50%;
+    line-height: 1.5;
+    padding: 0.5rem 1rem;
+    border-color:#4170f0;
+    cursor: pointer;
+}
+
+.adv_signup_button:hover{
+    background-color: #0f37a2f2;
+}
+.adv_signup_button:focus{
+    background-color: #0f37a2f2;
+}
+.adv_signup_button:visited{
+    background-color: #0f37a2f2;
+}
+.adv_signup_link{
+    font-size: 14px;
+    color: #3E66E5;
+}
+.adv_signup_link:hover{
+    color: #3E66E5;
+}
+.adv_signup_link:focus{
+    color: #3E66E5;
+}
+.adv_signup_link:visited{
+    color: #3E66E5;
+}
+
+.adv_light_text{
+    font-size: 14px;
+    color: #525252;
+}
+
+.adv_create_new_acc_btn{
+    background-color: #F9F9F9;
+    box-shadow: 0 0 5px 2px rgba(203,203,203,0.50);
+    border-radius: 2px;
+    font-size: 14px;
+    color: #3E66E5;
+}
+
+.adv_input_row .custom-control-label{
+    cursor: pointer;
+}
+.adv_input_row .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before{
+    background-color: rgba(65, 111, 237, 1);
+}
