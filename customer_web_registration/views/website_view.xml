@@ -6,11 +6,6 @@
                 <a href="/" t-attf-class="navbar-brand logo #{_link_class}">
                     <span role="img" t-att-aria-label="'Logo of %s' % website.name" t-att-title="website.name" t-field="website.logo" t-options="{'widget': 'image'}"/>
                 </a>
-                <t t-if="not request.session.uid">
-                    <a class="nav-link fw-bold" role="button" t-attf-href="/web/signup/individual?{{ keep_query() }}">
-                        Registration
-                    </a>
-                </t>
             </xpath>
         </template>
     </data>
