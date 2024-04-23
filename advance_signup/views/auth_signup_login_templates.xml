@@ -36,7 +36,7 @@
         <template id="input_type_selection" name="SignUp Input type Selection">
             <t t-set="field_values" t-value="field_vals.get('f_values')"/>
             <label t-att-for="field_name"><t t-out="field_vals.get('label')"/></label>
-            <select t-attf-class="form-control"
+            <select t-attf-class="form-control form-control-sm"
                 t-att-required="'required' if field_vals.get('is_required') else None"
                 t-att-name="field_name"
                 t-att-title="field_vals.get('help')"
@@ -54,7 +54,7 @@
         <template id="input_type_textarea" name="SignUp Input type Textarea">
             <label t-att-for="field_name"><t t-out="field_vals.get('label')"/></label>
             <textarea
-                class="form-control o_website_form_input"
+                class="form-control form-control-sm o_website_form_input"
                 t-att-required="'required' if field_vals.get('is_required') else None"
                 t-att-name="field_name"
                 t-att-id="field_name"
@@ -84,7 +84,7 @@
                 t-att-type="'number' if type=='float' else type"
                 t-att-name="field_name"
                 t-att-id="field_name"
-                class="form-control"
+                class="form-control form-control-sm"
                 t-att-placeholder="field_vals.get('placeholder')"
                 t-att-title="field_vals.get('help')"
                 t-att-required="'required' if field_vals.get('is_required') else None"
@@ -116,7 +116,7 @@
                 t-att-type="'date' if type=='date' else type"
                 t-att-name="field_name"
                 t-att-id="field_name"
-                class="form-control bimg"
+                class="form-control form-control-sm bimg"
                 t-att-placeholder="field_vals.get('placeholder')"
                 t-att-title="field_vals.get('help')"
                 t-att-required="'required' if field_vals.get('is_required') else None"
@@ -204,9 +204,9 @@
                     <span t-if="signup_enabled" class="adv_light_text float-end">
                         <span class="mr8">Don't have an account ?</span>
                         <a class="adv_create_new_acc_btn btn"
-                            t-attf-href="/web/signup?{{ keep_query() }}">Create an account</a>
+                            t-attf-href="/web/signup?{{ keep_query() }}">CUSTOMER APPLICATION</a>
                     </span>
-                    <h4 t-att-class="'mt8' if signup_enabled else ''" style="display:inline-block;">ALREADY REGISTERED ?</h4>
+                    <h4 t-att-class="'mt8' if signup_enabled else ''" style="display:inline-block;">LOGIN HERE</h4>
                     <span class="adv_light_text">
                         <t t-out="signup_settings.login_page_content"></t>
                     </span>
