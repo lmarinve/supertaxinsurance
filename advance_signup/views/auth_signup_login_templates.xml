@@ -96,7 +96,7 @@
             <input
                 t-att-type="'file' if type=='binary' else type"
                 t-att-name="field_name"
-                class="form-control"
+                class="form-control form-control-sm"
                 t-att-placeholder="field_vals.get('placeholder')"
                 t-att-title="field_vals.get('help')"
                 t-att-required="'required' if field_vals.get('is_required') else None"
@@ -258,7 +258,6 @@
             </xpath>
             <xpath expr="//form[hasclass('oe_signup_form')]//t[@t-call='auth_signup.fields']" position="before">
                 <div t-if="signup_settings" class="adv_form_content mb16">
-                    <h4>Create your account</h4>
                     <t t-if="signup_settings.signup_page_content">
                         <t t-out="signup_settings.signup_page_content"></t>
                     </t>
