@@ -63,7 +63,7 @@ class MemberAppointment(http.Controller):
     @http.route('/appointment/book/confirm', auth="public", website=True)
     def confirm_booking(self, **post):
         Employee = request.env['hr.employee'].sudo()
-        employee = Employeesearch([('work_email', '=', post.get('work_email'))], limit=1)
+        employee = Employee.search([('work_email', '=', post.get('work_email'))], limit=1)
         if post.get('calendar_id'):
             calendar_id = request.env['appointment.calendar'].sudo().browse(int(post.get('calendar_id')))
             start_date = datetime.strptime(post.get('start_datetime'), '%Y-%m-%d %H:%M:%S')
