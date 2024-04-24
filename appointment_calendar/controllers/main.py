@@ -8,6 +8,9 @@ from odoo import fields, http
 from odoo.http import request
 from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
 
+import logging
+_logger = logging.getLogger(__name__)
+
 
 class MemberAppointment(http.Controller):
 
@@ -62,6 +65,11 @@ class MemberAppointment(http.Controller):
 
     @http.route('/appointment/book/confirm', auth="public", website=True)
     def confirm_booking(self, **post):
+        _logger.info("***********************")
+        _logger.info("information log message")
+        _logger.info("work_email")
+        _logger.info(post.get('work_email'))
+        _logger.info("***********************")
         Employee = request.env['hr.employee'].sudo()
         employee = Employee.search([('work_email', '=', post.get('work_email'))], limit=1)
         if post.get('calendar_id'):
@@ -112,7 +120,16 @@ class MemberAppointment(http.Controller):
         year = sel_date[2]
         calendar_line = request.env['appointment.calendar.line'].sudo().search([('line_id', '=', int(calendar_id))])
         calendar1 = request.env['appointment.calendar'].sudo().browse(int(calendar_id))
-        cal_eve = request.env['calendar.event'].search([('employee_ids','in',int(employee_id))])
+
+        _logger.info(employee_id)
+        employee = request.env['hr.employee'].sudo().search([('id', '=', int(employee_id))])
+
+        _logger.info("******** Employee ********")
+        _logger.info(employee.work_email)
+        partner = request.env['res.partner'].sudo().search([('email', '=', employee.work_email)], limit=1)
+        _logger.info(int(partner.id))
+
+        cal_eve = request.env['calendar.event'].sudo().search([('partner_ids','in',int(partner.id))])
         new_cal_eve = [calendar1.get_tz_date(datetime.strptime(fields.Datetime.to_string(eve.start), DEFAULT_SERVER_DATETIME_FORMAT), calendar1.tz) for eve in cal_eve]
 
         slots = []

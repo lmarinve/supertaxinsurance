@@ -5,7 +5,7 @@
             <field name="name">Appointment</field>
             <field name="url">/appointment/member</field>
             <field name="parent_id" ref="website.main_menu"/>
-            <field name="sequence" type="int">1</field>
+            <field name="sequence" type="int">100</field>
         </record>
         <record id="weekoff_day0" model="appointment.calendar.weekoff">
             <field name="name">Monday</field>
