@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    
+    <!-- res_users Inherited -->
+    <record id="res_users_invitation_form_view" model="ir.ui.view">
+        <field name="name">res.users.invitation.form.view</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form" />
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="Invited User">
+                    <field name="invitation_ids">
+                    	<tree string="Invitations Information">
+							<field name="name"/>
+							<field name="email"/>
+							<field name="invitation_date"/>
+							<field name="user_id"/>
+						</tree>
+                    </field>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <!-- Add new res_users_invitation extended in settings -->
+    <record id="view_res_users_invitation_form" model="ir.ui.view">
+            <field name="name">res.users.invitation.form</field>
+            <field name="model">res.users.invitation</field>
+            <field name="arch" type="xml">
+            	<form string="User Invitations" version="9.0">
+            		<sheet>
+            			<group cols="4">
+            				<group>
+            					<field name="name"/>
+            					<field name="email"/>
+            					<field name="invitation_date"/>
+            					<field name="user_id"/>
+        					</group>
+            			</group>
+        			</sheet>
+    			</form>
+			</field>
+	</record>
+
+
+	<record id="view_res_users_invitation_tree" model="ir.ui.view">
+		<field name="name">res.users.invitation.tree</field>
+		<field name="model">res.users.invitation</field>
+		<field name="arch" type="xml">
+			<tree string="User Invitations">
+				<field name="name"/>
+				<field name="email"/>
+				<field name="invitation_date"/>
+				<field name="user_id"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="action_res_users_invitation_form" model="ir.actions.act_window">
+		<field name="name">Invitations</field>
+		<field name="res_model">res.users.invitation</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem action="action_res_users_invitation_form"
+            id="menu_action_res_users_invitation"
+            parent="base.menu_users"
+            />
+    
+    
+</odoo>

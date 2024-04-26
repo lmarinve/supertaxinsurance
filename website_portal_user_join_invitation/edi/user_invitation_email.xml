@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<odoo>
+        
+        <!--Email template -->
+        <record id="email_template_join_user_invitation" model="mail.template">
+            <field name="name">Join User Invitation Request...!!</field>
+            <field name="subject">Invitation Mail to Join ${object.user_id.company_id.name}</field>
+            <field name="model_id" ref="website_portal_user_join_invitation.model_res_users_invitation" />
+            <field name="auto_delete" eval="True" />
+        </record>
+
+        <!--Email template -->
+        <record id="email_template_join_request_invitation" model="mail.template">
+            <field name="name">Join Request Invitation Mail...!!</field>
+            <field name="subject">Join Invitation Mail ${object.user_id.company_id.name}</field>
+            <field name="model_id" ref="website_portal_user_join_invitation.model_res_users_invitation" />
+            <field name="auto_delete" eval="True" />
+            <field name="body_html"><![CDATA[
+                    <div style="font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; ">
+                        <p><strong>Dear ${object.user_id.name} !!! </strong></p>
+                        <p><strong>${object.name} wants to Join ${object.user_id.company_id.name}! </strong></p>
+                        <p><strong>Details: </strong></p>
+                        <p><strong>NAME:</strong> ${object.name} </p>
+                        <p><strong>EMAIL:</strong> ${object.email} </p>
+                    </div>
+                    
+                    <br/>
+                        ]]>
+            </field>
+        </record>
+        
+                
+</odoo>

@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_invitation_user,res.portal.user.invite.user,model_res_users_invitation,,1,1,1,0
+access_model_mail_message,access.mail.model.mail.message,mail.model_mail_message,,1,1,1,0
+access_model_mail_temp,access.mail.model.mail.template,mail.model_mail_template,,1,1,1,0
+access_mail_model_mail_mail,access.mail.model.mail.mail,mail.model_mail_mail,,1,1,1,0
+acce3ss_base_model_res_users,Access.base.model.res.users,base.model_res_users,,1,1,1,0

@@ -17,7 +17,7 @@ odoo.define('appointment_calendar.appointment', function(require) {
             })
             .on('changeDate', function(e) {
                 var date = $(this).datepicker('getDate');
-                var day = e.date.getDate()
+                var day = e.date.getDate() +1
                 var month = e.date.getMonth() + 1
                 var year = e.date.getFullYear()
                 var selectedDate = day + '-' + month + '-' + year

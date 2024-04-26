@@ -44,6 +44,9 @@ class MemberAppointment(http.Controller):
 
     @http.route('/appointment/book', auth="public", website=True)
     def book_time(self, **post):
+        _logger.info("***********************")
+        _logger.info("/appointment/book")
+        _logger.info("***********************")
         if post.get('selectedDate') and post.get('selectedTime'):
             date_time = '%s %s' % (post.get('selectedDate'), post.get('selectedTime'))
             start_date = datetime.strptime(date_time, '%d-%m-%Y %H:%M')
@@ -59,14 +62,19 @@ class MemberAppointment(http.Controller):
                 'duration': round((float(minutes_slot) / 60.0), 2),
                 'calendar_id': int(calendar_id),
                 'minutes_slot': int(post.get('minutes_slot')),
-                'employee': employee
+                'employee': employee,
+                'partner': self.env.user
             })
+            _logger.info("***********************")
+            _logger.info("/appointment/book2")
+            _logger.info(self.env.user.email)
+            _logger.info("***********************")
             return request.render('appointment_calendar.appointment_book', values)
 
     @http.route('/appointment/book/confirm', auth="public", website=True)
     def confirm_booking(self, **post):
         _logger.info("***********************")
-        _logger.info("information log message")
+        _logger.info("/appointment/book/confirmation")
         _logger.info("work_email")
         _logger.info(post.get('work_email'))
         _logger.info("***********************")

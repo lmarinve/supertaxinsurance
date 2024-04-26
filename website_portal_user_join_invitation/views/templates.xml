@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	   
+		   <!-- Portal User Invitation Request Button Link -->
+		   <template id="my_invitation_request_link_custom" inherit_id="portal.portal_layout">
+				<xpath expr="//div[hasclass('o_portal_my_details')]" position="inside">
+					<div class='manage_payment_method mt16'>
+						<a class="btn btn-primary" href="/my/invitation/request">Invitation Request</a>
+					</div>
+				</xpath>
+		   </template>
+	
+		<!-- Portal User Invitation Request Page -->
+
+		<template id="invitation_request" name="Portal User Invitation Request">
+			<t t-call="portal.portal_layout">
+				<br/>
+				<t t-set="additional_title">Send Portal User Invitation Request</t>
+				<div class="o_portal_wrap" id="wrap">
+					<div class="container-fluid oe_website_sale">
+						<div class="container">
+							<div class="row">
+								<h3>Send Portal User Invitation Request</h3>
+							</div>
+						</div>
+						<div class="container">
+							<div>
+								<form action="/my/invitation/request/confirm/" method="post">
+									<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+									<t t-if="request.params.get('already_user')">
+										<div class='offset-lg-1 form-group row col-md-4 alert alert-warning'>
+											<span >Invited User Already added in System!!!!</span>
+										</div>
+									</t>
+									<div>
+										<div class="col-md-12 oe_cart">
+												<div class="row">
+												<!-- if user is login -->
+													<t t-if="website.user_id != user_id">
+														<input name="user_id" t-att-value="user_id.id" type="hidden" />
+													</t>
+												</div>
+												
+												<div class="row">
+												<!-- if user is not login -->
+												<t t-if="website.user_id == user_id">
+													<div t-attf-class="form-group  col-xl-6 #{error and 'user_id' in error and 'has-error' or ''}">
+														<label class="col-form-label" for="user_id">Select User</label>
+														<div class="col-md-7 col-sm-8">
+															<t t-set="users_list" t-value="website.get_users_list()" />
+															<select name="user_id" class="form-control" required="required">
+																<option value="">Select User...</option>
+																<t t-foreach="users_list or []" t-as="user">
+																	<option t-att-value="user.id">
+																		<t t-esc="user.name" />
+																	</option>
+																</t>
+															</select>
+														</div>
+													</div>
+												</t>
+												</div>
+										
+												<div class="row">
+													<div class="col-md-10">
+														<label class="col-form-label col-md-2" for="name">Name</label>
+														<div class="col-md-8">
+															<input type="text" class="form-control o_website_form_input" name="name" required=""/>
+														</div>
+													</div>
+												</div>
+												<div class="row">	
+													<div class="col-md-10">
+														<label class="col-form-label col-md-2" for="email">Email</label>
+														<div class="col-md-8">
+															<input type="email" required="" name="email" class="form-control o_website_form_input" />
+														</div>
+													</div>
+												</div>
+												
+												<div style="height:1vh;"/>
+												<div class="col-lg-12 d-flex mb-3">
+													<div class="float-left mt-2">
+														<a href="/" class="btn btn-primary">
+															<span class="fa fa-long-arrow-left" />
+															Return to Home
+														</a>
+													</div>
+													<div class="float-right mt-2">
+														<button type="submit" class="btn btn-primary" style="margin-left: 50px;" href="/my/invitation/request/confirm/">
+															<span> Send Invitation</span>
+															<span class="fa fa-long-arrow-right" />
+														</button>
+													</div>
+												</div>
+											</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</t>
+		</template>
+
+
+		<!-- Invitation Thank You page -->
+
+		<template id="invitation_thankyou" name="Invitation Thank You">
+			<t t-call="website.layout">
+				<div id="wrap">
+					<div class="oe_structure">
+						<div class="container">
+							<h1>Thank you!</h1>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="alert alert-success">
+										Thank you for your Invitation Request...!!!
+										<button type="button" class="close" data-dismiss="alert">&amp;times;
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</t>
+		</template>
+
+		<template id="user_thankyou" name="Invitation Thank You">
+			<t t-call="website.layout">
+				<div id="wrap">
+					<div class="oe_structure" />
+					<div class="container">
+						<h1>Thank you!</h1>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="alert alert-success">
+									Thank you for Registeration...!!!
+									<button type="button" class="close" data-dismiss="alert">&amp;times;
+									</button>									
+								</div>
+								<a href="/web/login" class="btn btn-primary">
+										Please click here to login 
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="oe_structure" />
+				</div>
+			</t>
+		</template>
+
+		<template id="invited_user" name="Invited User">
+		<t t-call="website.layout">
+			<t t-set="additional_title">Welcome</t>
+			<div id="wrap">
+				<div>
+					<br/>
+					<h3 style="text-align:center">Welcome</h3>
+					<!-- <t t-if="website.user_id == user_id"> -->
+						<form t-attf-action="/process/request/" method="post" class="s_website_form container-fluid mt32">
+							<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+							<div class="offset-lg-3 offset-md-4 col-md-10">
+								<t t-if="request.params.get('email_exists')">
+									<div class='offset-lg-1 form-group row col-md-3 alert alert-warning'>
+										<span >Email id already exists.....!!!!</span>
+										<span>&#160; &#160;&#160;&#160;&#160;&#160;</span>
+										<button type="button" class="close" data-dismiss="alert">&amp;times;
+									</button>
+									</div>
+								</t>
+								<t t-if="request.params.get('wrong_pswd')">
+									<div class='offset-lg-1 form-group row col-md-4 alert alert-warning'>
+										<span >Password and confirm password is not matched!!!!</span>
+										<span>&#160; &#160;&#160;&#160;</span>
+										<button type="button" class="close" data-dismiss="alert">&amp;times;
+									</button>
+									</div>
+								</t>
+
+								<div class="form-group row form-field o_website_form_required_custom ">
+									<label class="col-md-2 col-form-label" for="name">Your Name</label>
+									<div class="col-md-4">
+										<input type="text" class="form-control" name="name" required="True"/>
+									</div>
+								</div>
+								<div class="form-group row form-field o_website_form_required_custom ">
+									<label class="col-md-2 col-form-label" for="email">Email</label>
+									<div  class="col-md-4">
+										<input type="email" required="True" name="email" class="form-control" />
+									</div>
+								</div>
+								<div class="form-group row form-field o_website_form_required_custom " >
+									<label class="col-md-2 col-form-label" for="pswd">Password</label>
+									<div  class="col-md-4" >
+										<input type="password" required="True" name="pswd" class="form-control" />
+									</div>
+								</div>
+								<div class="form-group row form-field o_website_form_required_custom ">
+									<label  class="col-md-2 col-form-label" for="pswd2">Confirm Password</label>
+									<div class="col-md-4" >
+										<input type="text" required="True" name="pswd2" class="form-control" />
+									</div>
+								</div>
+								
+							</div>
+							<div class="form-group row offset-lg-7 offset-md-4 col-md-10">
+								<button type="submit" class="btn btn-primary">
+								<span> Submit </span>
+								</button>
+							</div>
+						</form>
+					<!-- </t> -->
+				</div>
+			</div>
+		</t>
+	</template>		
+		
+				
+
+</odoo>
