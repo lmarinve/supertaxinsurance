@@ -206,7 +206,6 @@
                         <a class="adv_create_new_acc_btn btn"
                             t-attf-href="/web/signup?{{ keep_query() }}">CUSTOMER APPLICATION</a>
                     </span>
-                    <h4 t-att-class="'mt8' if signup_enabled else ''" style="display:inline-block;">LOGIN HERE</h4>
                     <span class="adv_light_text">
                         <t t-out="signup_settings.login_page_content"></t>
                     </span>

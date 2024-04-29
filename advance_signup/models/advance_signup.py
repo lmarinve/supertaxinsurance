@@ -104,16 +104,14 @@ class AdvSignupSettings(models.Model):
         default='<p><span style="color: rgb(160, 160, 160); font-family: Georgia,\
          Times, &quot;Times New Roman&quot;, serif; font-style: italic; \
          font-variant-ligatures: initial; font-variant-caps: initial; font-weight: initial;\
-         text-align: inherit;">Registration is free and easy! Please enter the following \
-         information to create your account.</span></p>'
+         text-align: inherit;">Please enter the information to create your account</span></p>'
         )
     login_page_content = fields.Html("Login Page Content",
         copy=True,
         translate=True,
         readonly=False,
         default='<p><span style="color: rgb(160, 160, 160); font-family: Georgia,\
-         Times, &quot;Times New Roman&quot;, serif; font-style: italic;">If you have an\
-         account with us, please log in.</span></p>'
+         Times, &quot;Times New Roman&quot;, serif; font-style: italic;">Please Log In</span></p>'
         )
     reset_passw_page_content = fields.Html("Reset Password Content",
         copy=True,
@@ -121,7 +119,7 @@ class AdvSignupSettings(models.Model):
         readonly=False,
         default='<p><span style="color: rgb(160, 160, 160); font-family: Georgia,\
          Times, &quot;Times New Roman&quot;, serif; font-style: italic;">Please \
-         enter your email address below. You will receive a link to reset your password.</span></p>'
+         enter your email. You will receive a reset password link</span></p>'
         )
     t_n_c_content = fields.Html("Terms and Condition",
         copy=True,
