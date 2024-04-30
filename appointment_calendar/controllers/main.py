@@ -63,11 +63,10 @@ class MemberAppointment(http.Controller):
                 'calendar_id': int(calendar_id),
                 'minutes_slot': int(post.get('minutes_slot')),
                 'employee': employee,
-                'partner': self.env.user
             })
             _logger.info("***********************")
             _logger.info("/appointment/book2")
-            _logger.info(self.env.user.email)
+            _logger.info(values)
             _logger.info("***********************")
             return request.render('appointment_calendar.appointment_book', values)
 
@@ -78,6 +77,8 @@ class MemberAppointment(http.Controller):
         _logger.info("work_email")
         _logger.info(post.get('work_email'))
         _logger.info("***********************")
+        Partner = request.env['res.partner'].sudo()
+        partner = Partner.search([('email', '=', post.get('work_email'))], limit=1)
         Employee = request.env['hr.employee'].sudo()
         employee = Employee.search([('work_email', '=', post.get('work_email'))], limit=1)
         if post.get('calendar_id'):
@@ -96,7 +97,7 @@ class MemberAppointment(http.Controller):
                 })
             event = {
                 'name': '%s-%s' % (post.get('first_name'), post.get('start_datetime')),
-                'employee_ids': [(6, 0, [employee.id, int(post.get('employee_id'))])],
+                'partner_ids': [(6, 0, [partner.id, int(partner.id)])],
                 # 'start_datetime': fields.Datetime.to_string(utc_date),
                 'duration': float(post.get('duration')),
                 'start': fields.Datetime.to_string(utc_date),
