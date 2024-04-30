@@ -74,27 +74,36 @@ class MemberAppointment(http.Controller):
     def confirm_booking(self, **post):
         _logger.info("***********************")
         _logger.info("/appointment/book/confirmation")
-        _logger.info("work_email")
-        _logger.info(post.get('work_email'))
+        _logger.info(post)
+        _logger.info("guest_email")
+        _logger.info(post.get('email'))
         _logger.info("***********************")
-        Partner = request.env['res.partner'].sudo()
-        partner = Partner.search([('email', '=', post.get('work_email'))], limit=1)
         Employee = request.env['hr.employee'].sudo()
-        employee = Employee.search([('work_email', '=', post.get('work_email'))], limit=1)
+        employee = Employee.browse(int(post.get('employee_id')))
+        # employee = Employee.search([('work_email', '=', post.get('work_email'))], limit=1)
+        _logger.info("***********************")
+        _logger.info("employee")
+        _logger.info(employee.work_email)
+        Partner = request.env['res.partner'].sudo()
+        partner = Partner.search([('email', '=', employee.work_email)], limit=1)
+        _logger.info("***********************")
+        _logger.info("******* partner *******")
+        _logger.info(partner)
+        _logger.info("***********************")
         if post.get('calendar_id'):
             calendar_id = request.env['appointment.calendar'].sudo().browse(int(post.get('calendar_id')))
             start_date = datetime.strptime(post.get('start_datetime'), '%Y-%m-%d %H:%M:%S')
             utc_date = calendar_id.get_utc_date(start_date, calendar_id.tz)
             stop_date = utc_date + timedelta(minutes=int(post.get('minutes_slot')))
-            team_member = Employee.browse(int(post.get('employee_id')))
+            team_member = partner
             post['team_member'] = team_member
-            if not employee:
-                employee = Employee.create({
-                    'name': "%s %s" % (post.get('first_name'), post.get('last_name') and post.get('last_name') or ''),
-                    'work_email': post.get('work_email'),
-                    'work_phone': post.get('work_phone'),
-                    'tz': post.get('timezone'),
-                })
+            # if not employee:
+            #    employee = Employee.create({
+            #        'name': "%s %s" % (post.get('first_name'), post.get('last_name') and post.get('last_name') or ''),
+            #        'work_email': post.get('work_email'),
+            #        'work_phone': post.get('work_phone'),
+            #        'tz': post.get('timezone'),
+            #    })
             event = {
                 'name': '%s-%s' % (post.get('first_name'), post.get('start_datetime')),
                 'partner_ids': [(6, 0, [partner.id, int(partner.id)])],
@@ -104,6 +113,10 @@ class MemberAppointment(http.Controller):
                 'stop': fields.Datetime.to_string(stop_date),
                 'alarm_ids': [(6, 0, calendar_id.alarm_ids.ids)],
             }
+            _logger.info("***********************")
+            _logger.info("******** event ********")
+            _logger.info(event)
+            _logger.info("***********************")
             app = request.env['calendar.event'].sudo().with_context({'no_mail': True}).with_user(2).create(event)
             app.attendee_ids.write({'state': 'accepted'})
             domain = [('line_id', '=', int(post.get('calendar_id'))), ('start_datetime', '=', fields.Datetime.to_string(utc_date)), ('end_datetime', '=', fields.Datetime.to_string(stop_date))]
