@@ -74,13 +74,11 @@ class WebsitePoralUserInvitation(http.Controller):
     def invitation_request(self, **post):
         cr, uid, context, pool = request.cr, request.uid, request.context, request.registry
         _logger.info("******** my/invitation/request ********")
-        _logger.info(f"cr: {cr}")
+        _logger.info(f"cursor: {cr}")
         _logger.info("******** uid ********")
         _logger.info(f"uid: {uid}")
         _logger.info("******** context ********")
         _logger.info(f"context: {context}")
-        _logger.info("******** pool ********")
-        _logger.info(f"pool: {pool}")
         _logger.info("****************")
 
 
@@ -88,10 +86,20 @@ class WebsitePoralUserInvitation(http.Controller):
 
     @http.route(['/my/invitation/request/confirm/'], type='http', auth="public", website=True)
     def invitation_confirm(self, **post):
+        _logger.info("******** my/invitation/request/confirm ********")
         if post.get('debug'):
+            _logger.info("***********************************")
+            _logger.info("******** post.get('debug') ********")
+            _logger.info("***********************************")
             return request.render("website_portal_user_join_invitation.invitation_thankyou")
         if not post:
+            _logger.info("*************************")
+            _logger.info("******** no post ********")
+            _logger.info("*************************")
             return request.render("website_portal_user_join_invitation.invitation_thankyou")
+        _logger.info("*******************************")
+        _logger.info(f"******** post {post} ********")
+        _logger.info("*******************************")
         user_id = post['user_id']
         name = post['name']
         email = post['email']
@@ -101,45 +109,79 @@ class WebsitePoralUserInvitation(http.Controller):
         invitation_create = invitation_obj.sudo().search([('email','=',email)])
         user_ids = False
         if invitation_create.id:
+            _logger.info("***************************************************************")
+            _logger.info(f"******** invitation_create.id: {invitation_create.id} ********")
+            _logger.info("***************************************************************")
             user_ids = request.env['res.users'].search([('email','=',email)],limit=1)
         if not invitation_create.id: 
+            _logger.info("*****************************************")
+            _logger.info("******** no invitation_create.id ********")
+            _logger.info("*****************************************")
             invitation_create = invitation_obj.create({ 'name': name, 'email': email, 'invitation_date': datetime.datetime.now(), 'user_id': int(user_id),'website_port_sample':http.request.httprequest.host_url })
         if user_ids:
+            _logger.info("*********************************************")
+            _logger.info(f"******** user_ids.id: {user_ids.id} ********")
+            _logger.info("*********************************************")
             partner_id = partner_obj.sudo().search([('email','=',email),('user_ids','=',user_ids.id)])
         else:
             partner_id = partner_obj.sudo().search([('email','=',email)])
         if not partner_id.id:
-            partner_id = partner_obj.sudo().create({
-                'name':name,
-                'email':email,
-            })
+            _logger.info("***********************************")
+            _logger.info("******** no partner_id.id ********")
+            _logger.info("***********************************")
+            # partner_id = partner_obj.sudo().create({
+            #     'name':name,
+            #     'email':email,
+            # })
 
         lang = request.env.user.lang
         company_id = request.env.user.company_id.id
         user = request.env['res.users'].sudo().search([('login','=',email)])
         if user:
+            _logger.info("*******************************")
+            _logger.info(f"******** user: {user} ********")
+            _logger.info("*******************************")
             return request.redirect("/my/invitation/request?already_user=1")
         else:
-            new_user = request.env['res.users'].sudo().with_context(no_reset_password=True)._create_user_from_template({
-                'email': email,
-                'login': email,
-                'partner_id': partner_id.id,
-                'company_id': company_id,
-                'company_ids': [(6, 0, [company_id])],
-            })
+            _logger.info("*************************")
+            _logger.info("******** no user ********")
+            _logger.info("*************************")
+            # new_user = request.env['res.users'].sudo().with_context(no_reset_password=True)._create_user_from_template({
+            #    'email': email,
+            #    'login': email,
+            #    'partner_id': partner_id.id,
+            #    'company_id': company_id,
+            #    'company_ids': [(6, 0, [company_id])],
+            # })
         
-        base_url = partner_id.sudo().get_base_url()
-        route = 'login'
-        query = dict(db=request.env.cr.dbname,partner=partner_id.id)
+        # base_url = partner_id.sudo().get_base_url()
+        # route = 'login'
+        # query = dict(db=request.env.cr.dbname,partner=partner_id.id)
 
-        final_url = werkzeug.urls.url_join(base_url, "/web/%s?%s" % (route,werkzeug.urls.url_encode(query)))
+        # final_url = werkzeug.urls.url_join(base_url, "/web/%s?%s" % (route,werkzeug.urls.url_encode(query)))
 
 
         if request.session.uid:
+            _logger.info("*************************************************************")
+            _logger.info(f"******** request.session.uid: {request.session.uid} ********")
+            _logger.info("***********************************")
             su_id = request.env['res.users'].sudo().browse(request.env.user.id)
+            su_partner_id = partner_obj.sudo().search([('email','=',su_id.email)])
+            _logger.info("*************************************************************")
+            _logger.info(f"******** su_id.email: {su_id.email} ********")
+            _logger.info("***********************************")
+            base_url = partner_id.sudo().get_base_url()
+
+            final_url = werkzeug.urls.url_join(base_url, "/web/signup")
+            _logger.info("*************************************************************")
+            _logger.info(f"******** su_id.email: {su_id.email} ********")
+            _logger.info("***********************************")
             template_id = request.env['ir.model.data']._xmlid_to_res_id('website_portal_user_join_invitation.email_template_join_user_invitation')
             email_template_obj = request.env['mail.template'].sudo().browse(template_id)
             if template_id:
+                _logger.info("*********************************************")
+                _logger.info(f"******** template_id: {template_id} ********")
+                _logger.info("*********************************************")
                 values = email_template_obj.generate_email(invitation_create.id, fields=['email_from'])
                 values['email_from'] = su_id.email
                 values['email_to'] = email
@@ -160,6 +202,10 @@ class WebsitePoralUserInvitation(http.Controller):
                     msg_id.sudo().send()
 
         else:   
+            _logger.info("***************************************")
+            _logger.info("******** no request.session_id ********")
+            _logger.info("***************************************")
+            return request.redirect("/my/invitation/request?already_user=1")
             su_id = request.env['res.users'].sudo().browse(int(user_id))
             template_id = request.env['ir.model.data']._xmlid_to_res_id('website_portal_user_join_invitation.email_template_join_request_invitation')
             email_template_obj = request.env['mail.template'].browse(template_id)
