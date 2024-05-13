@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+    <record id="business_category_1" model="adv.business.category">
+        <field name="name">Agriculture, Forestry, Hunting and Fishing</field>
+    </record>
+    <record id="business_category_2" model="adv.business.category">
+        <field name="name">Mining</field>
+    </record>
+    <record id="business_category_3" model="adv.business.category">
+        <field name="name">Utilities</field>
+    </record>
+    <record id="business_category_4" model="adv.business.category">
+        <field name="name">Construction</field>
+    </record>
+    <record id="business_category_5" model="adv.business.category">
+        <field name="name">Manufacturing</field>
+    </record>
+    <record id="business_category_6" model="adv.business.category">
+        <field name="name">Wholesale Trade</field>
+    </record>
+    <record id="business_category_7" model="adv.business.category">
+        <field name="name">Retail Trade</field>
+    </record>
+    <record id="business_category_8" model="adv.business.category">
+        <field name="name">Transportation and Warehousing</field>
+    </record>
+    <record id="business_category_9" model="adv.business.category">
+        <field name="name">Information</field>
+    </record>
+    <record id="business_category_10" model="adv.business.category">
+        <field name="name">Data Processing Services</field>
+    </record>
+    <record id="business_category_11" model="adv.business.category">
+        <field name="name">Finance and Insurance</field>
+    </record>
+    <record id="business_category_12" model="adv.business.category">
+        <field name="name">Real Estate and Rental Leasing</field>
+    </record>
+    <record id="business_category_13" model="adv.business.category">
+        <field name="name">Professional, Scientific, and Technical Services</field>
+    </record>
+    <record id="business_category_14" model="adv.business.category">
+        <field name="name">Management of Companies and Enterprises</field>
+    </record>
+    <record id="business_category_15" model="adv.business.category">
+        <field name="name">Administrative and Support Services</field>
+    </record>
+    <record id="business_category_16" model="adv.business.category">
+        <field name="name">Waste Management and Remediation Services</field>
+    </record>
+    <record id="business_category_17" model="adv.business.category">
+        <field name="name">Educational Services</field>
+    </record>
+    <record id="business_category_18" model="adv.business.category">
+        <field name="name">Healthcare and Social Assistance</field>
+    </record>
+    <record id="business_category_19" model="adv.business.category">
+        <field name="name">Arts, Entertainment, and Recreation</field>
+    </record>
+    <record id="business_category_20" model="adv.business.category">
+        <field name="name">Accommodation and Food Services</field>
+    </record>
+    <record id="business_category_21" model="adv.business.category">
+        <field name="name">Other Services</field>
+    </record>
+    <record id="business_category_22" model="adv.business.category">
+        <field name="name">Other</field>
+    </record>
+    <record id="business_activity_1" model="adv.business.activity">
+	<field name="code">110000</field>
+	<field name="name">Agriculture, forestry, hunting and fishing</field>
+	<field name="category_id" ref="business_category_1"/>
+    </record>
+    <record id="business_activity_2" model="adv.business.activity">
+	<field name="code">111000</field>
+	<field name="name">Crop production</field>
+	<field name="category_id" ref="business_category_1"/>
+    </record>
+    <record id="business_activity_3" model="adv.business.activity">
+	<field name="code">211110</field>
+	<field name="name">Oil and gas extraction</field>
+	<field name="category_id" ref="business_category_2"/>
+    </record>
+    <record id="business_activity_4" model="adv.business.activity">
+	<field name="code">211120</field>
+	<field name="name">Crude petroleum extraction</field>
+	<field name="category_id" ref="business_category_2"/>
+    </record>
+    <record id="business_activity_5" model="adv.business.activity">
+	<field name="code">211130</field>
+	<field name="name">Natural gas extraction</field>
+	<field name="category_id" ref="business_category_2"/>
+    </record>
+    <record id="business_activity_6" model="adv.business.activity">
+	<field name="code">212000</field>
+	<field name="name">Mining (except oil and gas)</field>
+	<field name="category_id" ref="business_category_2"/>
+    </record>
+    <record id="business_activity_7" model="adv.business.activity">
+	<field name="code">221000</field>
+	<field name="name">Utilities</field>
+	<field name="category_id" ref="business_category_3"/>
+    </record>
+    <record id="business_activity_8" model="adv.business.activity">
+	<field name="code">230000</field>
+	<field name="name">Construction</field>
+	<field name="category_id" ref="business_category_4"/>
+    </record>
+    <record id="business_activity_9" model="adv.business.activity">
+	<field name="code">236000</field>
+	<field name="name">Construction of buildings</field>
+	<field name="category_id" ref="business_category_4"/>
+    </record>
+    <record id="business_activity_10" model="adv.business.activity">
+	<field name="code">310000</field>
+	<field name="name">Manufacturing</field>
+	<field name="category_id" ref="business_category_5"/>
+    </record>
+    <record id="business_activity_11" model="adv.business.activity">
+	<field name="code">323100</field>
+	<field name="name">Printing and related support activities</field>
+	<field name="category_id" ref="business_category_5"/>
+    </record>
+    <record id="business_activity_12" model="adv.business.activity">
+	<field name="code">339110</field>
+	<field name="name">Medical equipment and supplies</field>
+	<field name="category_id" ref="business_category_5"/>
+    </record>
+    <record id="business_activity_13" model="adv.business.activity">
+	<field name="code">423000</field>
+	<field name="name">Merchant wholesaler, durable goods</field>
+	<field name="category_id" ref="business_category_6"/>
+    </record>
+    <record id="business_activity_14" model="adv.business.activity">
+	<field name="code">424000</field>
+	<field name="name">Merchant wholesaler, nondurable goods</field>
+	<field name="category_id" ref="business_category_6"/>
+    </record>
+    <record id="business_activity_15" model="adv.business.activity">
+	<field name="code">441100</field>
+	<field name="name">Automobile dealers</field>
+	<field name="category_id" ref="business_category_7"/>
+    </record>
+    <record id="business_activity_16" model="adv.business.activity">
+	<field name="code">442000</field>
+	<field name="name">Furniture and home furnishings stores</field>
+	<field name="category_id" ref="business_category_7"/>
+    </record>
+    <record id="business_activity_17" model="adv.business.activity">
+	<field name="code">444100</field>
+	<field name="name">Building materials and supplies dealers</field>
+	<field name="category_id" ref="business_category_7"/>
+    </record>
+    <record id="business_activity_18" model="adv.business.activity">
+	<field name="code">445100</field>
+	<field name="name">Grocery stores</field>
+	<field name="category_id" ref="business_category_7"/>
+    </record>
+    <record id="business_activity_19" model="adv.business.activity">
+	<field name="code">445200</field>
+	<field name="name">Specialty food stores</field>
+	<field name="category_id" ref="business_category_7"/>
+    </record>
+    <record id="business_activity_20" model="adv.business.activity">
+	<field name="code">446110</field>
+	<field name="name">Pharmacies and drug stores</field>
+	<field name="category_id" ref="business_category_7"/>
+    </record>
+    <record id="business_activity_21" model="adv.business.activity">
+	<field name="code">446199</field>
+	<field name="name">All other health and personal care stores</field>
+	<field name="category_id" ref="business_category_7"/>
+    </record>
+    <record id="business_activity_22" model="adv.business.activity">
+	<field name="code">448000</field>
+	<field name="name">Clothing and clothing Accessories stores</field>
+	<field name="category_id" ref="business_category_7"/>
+    </record>
+    <record id="business_activity_23" model="adv.business.activity">
+	<field name="code">451110</field>
+	<field name="name">Sporting Goods store</field>
+	<field name="category_id" ref="business_category_7"/>
+    </record>
+    <record id="business_activity_24" model="adv.business.activity">
+	<field name="code">451211</field>
+	<field name="name">Book stores</field>
+	<field name="category_id" ref="business_category_7"/>
+    </record>
+    <record id="business_activity_25" model="adv.business.activity">
+	<field name="code">452000</field>
+	<field name="name">General merchandise stores</field>
+	<field name="category_id" ref="business_category_7"/>
+    </record>
+    <record id="business_activity_26" model="adv.business.activity">
+	<field name="code">453000</field>
+	<field name="name">Miscellaneous store retailers</field>
+	<field name="category_id" ref="business_category_7"/>
+    </record>
+    <record id="business_activity_27" model="adv.business.activity">
+	<field name="code">453220</field>
+	<field name="name">Gift, novelty, and souvenir stores</field>
+	<field name="category_id" ref="business_category_7"/>
+    </record>
+    <record id="business_activity_28" model="adv.business.activity">
+	<field name="code">453310</field>
+	<field name="name">Used merchandise stores</field>
+	<field name="category_id" ref="business_category_7"/>
+    </record>
+    <record id="business_activity_29" model="adv.business.activity">
+	<field name="code">454110</field>
+	<field name="name">Electronic shopping and mail-order houses</field>
+	<field name="category_id" ref="business_category_7"/>
+    </record>
+    <record id="business_activity_30" model="adv.business.activity">
+	<field name="code">480000</field>
+	<field name="name">Transportation</field>
+	<field name="category_id" ref="business_category_8"/>
+    </record>
+    <record id="business_activity_31" model="adv.business.activity">
+	<field name="code">485000</field>
+	<field name="name">Transit and ground passenger transportation</field>
+	<field name="category_id" ref="business_category_8"/>
+    </record>
+    <record id="business_activity_32" model="adv.business.activity">
+	<field name="code">493000</field>
+	<field name="name">Warehousing and storage</field>
+	<field name="category_id" ref="business_category_8"/>
+    </record>
+    <record id="business_activity_33" model="adv.business.activity">
+	<field name="code">511110</field>
+	<field name="name">Newspaper publishers (except Internet)</field>
+	<field name="category_id" ref="business_category_9"/>
+    </record>
+    <record id="business_activity_34" model="adv.business.activity">
+	<field name="code">511120</field>
+	<field name="name">Periodical publishers (except Internet)</field>
+	<field name="category_id" ref="business_category_9"/>
+    </record>
+    <record id="business_activity_35" model="adv.business.activity">
+	<field name="code">511130</field>
+	<field name="name">Book publishers (except Internet)</field>
+	<field name="category_id" ref="business_category_9"/>
+    </record>
+    <record id="business_activity_36" model="adv.business.activity">
+	<field name="code">511140</field>
+	<field name="name">Directory and mailing list publishers (except Internet)</field>
+	<field name="category_id" ref="business_category_9"/>
+    </record>
+    <record id="business_activity_37" model="adv.business.activity">
+	<field name="code">511190</field>
+	<field name="name">Other publishers (except Internet)</field>
+	<field name="category_id" ref="business_category_9"/>
+    </record>
+    <record id="business_activity_38" model="adv.business.activity">
+	<field name="code">512000</field>
+	<field name="name">Motion picture and sound recording industries</field>
+	<field name="category_id" ref="business_category_9"/>
+    </record>
+    <record id="business_activity_39" model="adv.business.activity">
+	<field name="code">515100</field>
+	<field name="name">Radio and television broadcasting (except Internet)</field>
+	<field name="category_id" ref="business_category_9"/>
+    </record>
+    <record id="business_activity_40" model="adv.business.activity">
+	<field name="code">517000</field>
+	<field name="name">Telecommunications (including paging, cellular, satellite, cable, other telecommunications, and Internet service providers)</field>
+	<field name="category_id" ref="business_category_9"/>
+    </record>
+    <record id="business_activity_41" model="adv.business.activity">
+	<field name="code">519100</field>
+	<field name="name">Other information services (including news syndicates and libraries)</field>
+	<field name="category_id" ref="business_category_9"/>
+    </record>
+    <record id="business_activity_42" model="adv.business.activity">
+	<field name="code">519130</field>
+	<field name="name">Internet Publishing and Broadcast</field>
+	<field name="category_id" ref="business_category_9"/>
+    </record>
+    <record id="business_activity_43" model="adv.business.activity">
+	<field name="code">518210</field>
+	<field name="name">Data Processing, Hosting, and Related Services</field>
+	<field name="category_id" ref="business_category_10"/>
+    </record>
+    <record id="business_activity_44" model="adv.business.activity">
+	<field name="code">522100</field>
+	<field name="name">Depository credit intermediation (including commercial banking, savings institutions, and credit unions)</field>
+	<field name="category_id" ref="business_category_11"/>
+    </record>
+    <record id="business_activity_45" model="adv.business.activity">
+	<field name="code">522200</field>
+	<field name="name">Nondepository credit intermediation (including credit card issuing and sales financing)</field>
+	<field name="category_id" ref="business_category_11"/>
+    </record>
+    <record id="business_activity_46" model="adv.business.activity">
+	<field name="code">522110</field>
+	<field name="name">Credit card issuing</field>
+	<field name="category_id" ref="business_category_11"/>
+    </record>
+    <record id="business_activity_47" model="adv.business.activity">
+	<field name="code">522220</field>
+	<field name="name">Sales Financing</field>
+	<field name="category_id" ref="business_category_11"/>
+    </record>
+    <record id="business_activity_48" model="adv.business.activity">
+	<field name="code">522291</field>
+	<field name="name">Consumer lending</field>
+	<field name="category_id" ref="business_category_11"/>
+    </record>
+    <record id="business_activity_49" model="adv.business.activity">
+	<field name="code">522292</field>
+	<field name="name">Real estate credit</field>
+	<field name="category_id" ref="business_category_11"/>
+    </record>
+    <record id="business_activity_50" model="adv.business.activity">
+	<field name="code">522298</field>
+	<field name="name">Other non-depository credit intermediation</field>
+	<field name="category_id" ref="business_category_11"/>
+    </record>
+    <record id="business_activity_51" model="adv.business.activity">
+	<field name="code">523000</field>
+	<field name="name">Securities, commodity contracts, and other financial investments and related activities</field>
+	<field name="category_id" ref="business_category_11"/>
+    </record>
+    <record id="business_activity_52" model="adv.business.activity">
+	<field name="code">523920</field>
+	<field name="name">Portfolio management</field>
+	<field name="category_id" ref="business_category_11"/>
+    </record>
+    <record id="business_activity_53" model="adv.business.activity">
+	<field name="code">523930</field>
+	<field name="name">Investment advice</field>
+	<field name="category_id" ref="business_category_11"/>
+    </record>
+    <record id="business_activity_54" model="adv.business.activity">
+	<field name="code">524113</field>
+	<field name="name">Direct life insurance carriers</field>
+	<field name="category_id" ref="business_category_11"/>
+    </record>
+    <record id="business_activity_55" model="adv.business.activity">
+	<field name="code">524114</field>
+	<field name="name">Direct health and medical insurance carriers</field>
+	<field name="category_id" ref="business_category_11"/>
+    </record>
+    <record id="business_activity_56" model="adv.business.activity">
+	<field name="code">524126</field>
+	<field name="name">Direct property and casualty insurance carriers</field>
+	<field name="category_id" ref="business_category_11"/>
+    </record>
+    <record id="business_activity_57" model="adv.business.activity">
+	<field name="code">524130</field>
+	<field name="name">Reinsurance carriers</field>
+	<field name="category_id" ref="business_category_11"/>
+    </record>
+    <record id="business_activity_58" model="adv.business.activity">
+	<field name="code">524292</field>
+	<field name="name">Third-party administration of insurance and pension funds</field>
+	<field name="category_id" ref="business_category_11"/>
+    </record>
+    <record id="business_activity_59" model="adv.business.activity">
+	<field name="code">524298</field>
+	<field name="name">All other insurance-related activities</field>
+	<field name="category_id" ref="business_category_11"/>
+    </record>
+    <record id="business_activity_60" model="adv.business.activity">
+	<field name="code">525100</field>
+	<field name="name">Insurance and employee benefit funds</field>
+	<field name="category_id" ref="business_category_11"/>
+    </record>
+    <record id="business_activity_61" model="adv.business.activity">
+	<field name="code">525920</field>
+	<field name="name">Trusts, estates, and agency accounts</field>
+	<field name="category_id" ref="business_category_11"/>
+    </record>
+    <record id="business_activity_62" model="adv.business.activity">
+	<field name="code">525990</field>
+	<field name="name">Other Financial vehicles, including mortgage REITs)</field>
+	<field name="category_id" ref="business_category_11"/>
+    </record>
+    <record id="business_activity_63" model="adv.business.activity">
+	<field name="code">531110</field>
+	<field name="name">Lessors of residential buildings and dwellings (including equity REITs)</field>
+	<field name="category_id" ref="business_category_12"/>
+    </record>
+    <record id="business_activity_64" model="adv.business.activity">
+	<field name="code">531120</field>
+	<field name="name">Lessors of nonresidential buildings (except mini warehouses) (including equity REITs)</field>
+	<field name="category_id" ref="business_category_12"/>
+    </record>
+    <record id="business_activity_65" model="adv.business.activity">
+	<field name="code">531190</field>
+	<field name="name">Lessors of other real estate property (including equity REITs)</field>
+	<field name="category_id" ref="business_category_12"/>
+    </record>
+    <record id="business_activity_66" model="adv.business.activity">
+	<field name="code">531310</field>
+	<field name="name">Real estate property managers</field>
+	<field name="category_id" ref="business_category_12"/>
+    </record>
+    <record id="business_activity_67" model="adv.business.activity">
+	<field name="code">531390</field>
+	<field name="name">Other activities related to real estate</field>
+	<field name="category_id" ref="business_category_12"/>
+    </record>
+    <record id="business_activity_68" model="adv.business.activity">
+	<field name="code">532000</field>
+	<field name="name">Rental and leasing services</field>
+	<field name="category_id" ref="business_category_12"/>
+    </record>
+    <record id="business_activity_69" model="adv.business.activity">
+	<field name="code">532420</field>
+	<field name="name">Office machinery and equipment rental and leasing Services</field>
+	<field name="category_id" ref="business_category_12"/>
+    </record>
+    <record id="business_activity_70" model="adv.business.activity">
+	<field name="code">533110</field>
+	<field name="name">Lessors of nonfinancial intangible assets (except copyrighted works)</field>
+	<field name="category_id" ref="business_category_12"/>
+    </record>
+    <record id="business_activity_71" model="adv.business.activity">
+	<field name="code">541100</field>
+	<field name="name">Legal services</field>
+	<field name="category_id" ref="business_category_13"/>
+    </record>
+    <record id="business_activity_72" model="adv.business.activity">
+	<field name="code">541990</field>
+	<field name="name">Consumer credit counseling services</field>
+	<field name="category_id" ref="business_category_13"/>
+    </record>
+    <record id="business_activity_73" model="adv.business.activity">
+	<field name="code">541200</field>
+	<field name="name">Accounting, tax preparation, bookkeeping, and payroll services</field>
+	<field name="category_id" ref="business_category_13"/>
+    </record>
+    <record id="business_activity_74" model="adv.business.activity">
+	<field name="code">541300</field>
+	<field name="name">Architectural, engineering, and related services</field>
+	<field name="category_id" ref="business_category_13"/>
+    </record>
+    <record id="business_activity_75" model="adv.business.activity">
+	<field name="code">541380</field>
+	<field name="name">Testing laboratories</field>
+	<field name="category_id" ref="business_category_13"/>
+    </record>
+    <record id="business_activity_76" model="adv.business.activity">
+	<field name="code">541511</field>
+	<field name="name">Custom computer programming services</field>
+	<field name="category_id" ref="business_category_13"/>
+    </record>
+    <record id="business_activity_77" model="adv.business.activity">
+	<field name="code">541519</field>
+	<field name="name">Other computer-related services</field>
+	<field name="category_id" ref="business_category_13"/>
+    </record>
+    <record id="business_activity_78" model="adv.business.activity">
+	<field name="code">541610</field>
+	<field name="name">Management consulting services</field>
+	<field name="category_id" ref="business_category_13"/>
+    </record>
+    <record id="business_activity_79" model="adv.business.activity">
+	<field name="code">541700</field>
+	<field name="name">Scientific research and development services</field>
+	<field name="category_id" ref="business_category_13"/>
+    </record>
+    <record id="business_activity_80" model="adv.business.activity">
+	<field name="code">541800</field>
+	<field name="name">Advertising and related services</field>
+	<field name="category_id" ref="business_category_13"/>
+    </record>
+    <record id="business_activity_81" model="adv.business.activity">
+	<field name="code">541860</field>
+	<field name="name">Direct mail advertising</field>
+	<field name="category_id" ref="business_category_13"/>
+    </record>
+    <record id="business_activity_82" model="adv.business.activity">
+	<field name="code">541900</field>
+	<field name="name">Other professional, scientific, and technical services</field>
+	<field name="category_id" ref="business_category_13"/>
+    </record>
+    <record id="business_activity_83" model="adv.business.activity">
+	<field name="code">551111</field>
+	<field name="name">Offices of bank holding companies.</field>
+	<field name="category_id" ref="business_category_14"/>
+    </record>
+    <record id="business_activity_84" model="adv.business.activity">
+	<field name="code">551112</field>
+	<field name="name">Offices of other holding companies</field>
+	<field name="category_id" ref="business_category_14"/>
+    </record>
+    <record id="business_activity_85" model="adv.business.activity">
+	<field name="code">561000</field>
+	<field name="name">Administrative and support services</field>
+	<field name="category_id" ref="business_category_15"/>
+    </record>
+    <record id="business_activity_86" model="adv.business.activity">
+	<field name="code">561300</field>
+	<field name="name">Employment services</field>
+	<field name="category_id" ref="business_category_15"/>
+    </record>
+    <record id="business_activity_87" model="adv.business.activity">
+	<field name="code">561439</field>
+	<field name="name">Other business service centers</field>
+	<field name="category_id" ref="business_category_15"/>
+    </record>
+    <record id="business_activity_88" model="adv.business.activity">
+	<field name="code">561499</field>
+	<field name="name">All other business support services</field>
+	<field name="category_id" ref="business_category_15"/>
+    </record>
+    <record id="business_activity_89" model="adv.business.activity">
+	<field name="code">561500</field>
+	<field name="name">Travel arrangement and reservation services</field>
+	<field name="category_id" ref="business_category_15"/>
+    </record>
+    <record id="business_activity_90" model="adv.business.activity">
+	<field name="code">561520</field>
+	<field name="name">Tour operators</field>
+	<field name="category_id" ref="business_category_15"/>
+    </record>
+    <record id="business_activity_91" model="adv.business.activity">
+	<field name="code">561700</field>
+	<field name="name">Services to buildings and dwellings</field>
+	<field name="category_id" ref="business_category_15"/>
+    </record>
+    <record id="business_activity_92" model="adv.business.activity">
+	<field name="code">562000</field>
+	<field name="name">Waste management and remediation services (sanitary services)</field>
+	<field name="category_id" ref="business_category_16"/>
+    </record>
+    <record id="business_activity_93" model="adv.business.activity">
+	<field name="code">611420</field>
+	<field name="name">Computer training</field>
+	<field name="category_id" ref="business_category_17"/>
+    </record>
+    <record id="business_activity_94" model="adv.business.activity">
+	<field name="code">611430</field>
+	<field name="name">Professional and management development training</field>
+	<field name="category_id" ref="business_category_17"/>
+    </record>
+    <record id="business_activity_95" model="adv.business.activity">
+	<field name="code">611600</field>
+	<field name="name">Other schools and instruction (other than elementary and secondary schools or colleges and universities, which should select a code to describe their unrelated activities)</field>
+	<field name="category_id" ref="business_category_17"/>
+    </record>
+    <record id="business_activity_96" model="adv.business.activity">
+	<field name="code">611710</field>
+	<field name="name">Educational support services</field>
+	<field name="category_id" ref="business_category_17"/>
+    </record>
+    <record id="business_activity_97" model="adv.business.activity">
+	<field name="code">621110</field>
+	<field name="name">Offices of physicians</field>
+	<field name="category_id" ref="business_category_18"/>
+    </record>
+    <record id="business_activity_98" model="adv.business.activity">
+	<field name="code">621300</field>
+	<field name="name">Offices of other health practitioners</field>
+	<field name="category_id" ref="business_category_18"/>
+    </record>
+    <record id="business_activity_99" model="adv.business.activity">
+	<field name="code">621400</field>
+	<field name="name">Outpatient care centers</field>
+	<field name="category_id" ref="business_category_18"/>
+    </record>
+    <record id="business_activity_100" model="adv.business.activity">
+	<field name="code">621500</field>
+	<field name="name">Medical and diagnostic laboratories</field>
+	<field name="category_id" ref="business_category_18"/>
+    </record>
+    <record id="business_activity_101" model="adv.business.activity">
+	<field name="code">621610</field>
+	<field name="name">Home health care services</field>
+	<field name="category_id" ref="business_category_18"/>
+    </record>
+    <record id="business_activity_102" model="adv.business.activity">
+	<field name="code">621910</field>
+	<field name="name">Ambulance services</field>
+	<field name="category_id" ref="business_category_18"/>
+    </record>
+    <record id="business_activity_103" model="adv.business.activity">
+	<field name="code">621990</field>
+	<field name="name">All other ambulatory health care services</field>
+	<field name="category_id" ref="business_category_18"/>
+    </record>
+    <record id="business_activity_104" model="adv.business.activity">
+	<field name="code">623000</field>
+	<field name="name">Nursing and residential care facilities</field>
+	<field name="category_id" ref="business_category_18"/>
+    </record>
+    <record id="business_activity_105" model="adv.business.activity">
+	<field name="code">623990</field>
+	<field name="name">Other residential care facilities</field>
+	<field name="category_id" ref="business_category_18"/>
+    </record>
+    <record id="business_activity_106" model="adv.business.activity">
+	<field name="code">624100</field>
+	<field name="name">Individual and family services</field>
+	<field name="category_id" ref="business_category_18"/>
+    </record>
+    <record id="business_activity_107" model="adv.business.activity">
+	<field name="code">624110</field>
+	<field name="name">Community centers (except rec. only), youth Adoption agencies</field>
+	<field name="category_id" ref="business_category_18"/>
+    </record>
+    <record id="business_activity_108" model="adv.business.activity">
+	<field name="code">624200</field>
+	<field name="name">Community food and housing, and emergency and other relief services</field>
+	<field name="category_id" ref="business_category_18"/>
+    </record>
+    <record id="business_activity_109" model="adv.business.activity">
+	<field name="code">624210</field>
+	<field name="name">Meal delivery programs, Soup kitchens, or Food banks</field>
+	<field name="category_id" ref="business_category_18"/>
+    </record>
+    <record id="business_activity_110" model="adv.business.activity">
+	<field name="code">624310</field>
+	<field name="name">Vocational rehabilitation services</field>
+	<field name="category_id" ref="business_category_18"/>
+    </record>
+    <record id="business_activity_111" model="adv.business.activity">
+	<field name="code">624410</field>
+	<field name="name">Child day care services Arts, Entertainment, and Recreation</field>
+	<field name="category_id" ref="business_category_18"/>
+    </record>
+    <record id="business_activity_112" model="adv.business.activity">
+	<field name="code">711110</field>
+	<field name="name">Theater companies and dinner theaters</field>
+	<field name="category_id" ref="business_category_19"/>
+    </record>
+    <record id="business_activity_113" model="adv.business.activity">
+	<field name="code">711120</field>
+	<field name="name">Dance companies</field>
+	<field name="category_id" ref="business_category_19"/>
+    </record>
+    <record id="business_activity_114" model="adv.business.activity">
+	<field name="code">711130</field>
+	<field name="name">Musical groups and artists</field>
+	<field name="category_id" ref="business_category_19"/>
+    </record>
+    <record id="business_activity_115" model="adv.business.activity">
+	<field name="code">711190</field>
+	<field name="name">Other performing art companies</field>
+	<field name="category_id" ref="business_category_19"/>
+    </record>
+    <record id="business_activity_116" model="adv.business.activity">
+	<field name="code">711210</field>
+	<field name="name">Spectator sports (including sports clubs and racetracks)</field>
+	<field name="category_id" ref="business_category_19"/>
+    </record>
+    <record id="business_activity_117" model="adv.business.activity">
+	<field name="code">711300</field>
+	<field name="name">Promoters of performing arts, sports and similar events</field>
+	<field name="category_id" ref="business_category_19"/>
+    </record>
+    <record id="business_activity_118" model="adv.business.activity">
+	<field name="code">713110</field>
+	<field name="name">Amusement and theme parks</field>
+	<field name="category_id" ref="business_category_19"/>
+    </record>
+    <record id="business_activity_119" model="adv.business.activity">
+	<field name="code">713200</field>
+	<field name="name">Gambling industries</field>
+	<field name="category_id" ref="business_category_19"/>
+    </record>
+    <record id="business_activity_120" model="adv.business.activity">
+	<field name="code">713910</field>
+	<field name="name">Golf courses and country clubs</field>
+	<field name="category_id" ref="business_category_19"/>
+    </record>
+    <record id="business_activity_121" model="adv.business.activity">
+	<field name="code">713940</field>
+	<field name="name">Fitness and recreational sports centers</field>
+	<field name="category_id" ref="business_category_19"/>
+    </record>
+    <record id="business_activity_122" model="adv.business.activity">
+	<field name="code">713990</field>
+	<field name="name">All other amusement and recreation industries (including skiing facilities, marinas, and bowling centers)</field>
+	<field name="category_id" ref="business_category_19"/>
+    </record>
+    <record id="business_activity_123" model="adv.business.activity">
+	<field name="code">721000</field>
+	<field name="name">Accommodation</field>
+	<field name="category_id" ref="business_category_20"/>
+    </record>
+    <record id="business_activity_124" model="adv.business.activity">
+	<field name="code">721110</field>
+	<field name="name">Hotels (except casino hotels) and motels</field>
+	<field name="category_id" ref="business_category_20"/>
+    </record>
+    <record id="business_activity_125" model="adv.business.activity">
+	<field name="code">721210</field>
+	<field name="name">RV (recreational vehicle) parks and recreational camps</field>
+	<field name="category_id" ref="business_category_20"/>
+    </record>
+    <record id="business_activity_126" model="adv.business.activity">
+	<field name="code">721310</field>
+	<field name="name">Rooming and boarding houses, dormitories, and workers’ camps</field>
+	<field name="category_id" ref="business_category_20"/>
+    </record>
+    <record id="business_activity_127" model="adv.business.activity">
+	<field name="code">722320</field>
+	<field name="name">Caterers</field>
+	<field name="category_id" ref="business_category_20"/>
+    </record>
+    <record id="business_activity_128" model="adv.business.activity">
+	<field name="code">722440</field>
+	<field name="name">Drinking places (alcoholic beverages)</field>
+	<field name="category_id" ref="business_category_20"/>
+    </record>
+    <record id="business_activity_129" model="adv.business.activity">
+	<field name="code">722511</field>
+	<field name="name">Full-service restaurants</field>
+	<field name="category_id" ref="business_category_20"/>
+    </record>
+    <record id="business_activity_130" model="adv.business.activity">
+	<field name="code">722513</field>
+	<field name="name">Limited-service restaurants</field>
+	<field name="category_id" ref="business_category_20"/>
+    </record>
+    <record id="business_activity_131" model="adv.business.activity">
+	<field name="code">722514</field>
+	<field name="name">Cafeterias and buffets</field>
+	<field name="category_id" ref="business_category_20"/>
+    </record>
+    <record id="business_activity_132" model="adv.business.activity">
+	<field name="code">722515</field>
+	<field name="name">Snack and non-alcoholic beverage bars</field>
+	<field name="category_id" ref="business_category_20"/>
+    </record>
+    <record id="business_activity_133" model="adv.business.activity">
+	<field name="code">811000</field>
+	<field name="name">Repair and maintenance</field>
+	<field name="category_id" ref="business_category_21"/>
+    </record>
+    <record id="business_activity_134" model="adv.business.activity">
+	<field name="code">812300</field>
+	<field name="name">Drycleaning and laundry services</field>
+	<field name="category_id" ref="business_category_21"/>
+    </record>
+    <record id="business_activity_135" model="adv.business.activity">
+	<field name="code">812900</field>
+	<field name="name">Other personal services</field>
+	<field name="category_id" ref="business_category_21"/>
+    </record>
+    <record id="business_activity_136" model="adv.business.activity">
+	<field name="code">812930</field>
+	<field name="name">Parking lots and garages</field>
+	<field name="category_id" ref="business_category_21"/>
+    </record>
+    <record id="business_activity_137" model="adv.business.activity">
+	<field name="code">900001</field>
+	<field name="name">Investment activities of section (c)(), (), or () organizations</field>
+	<field name="category_id" ref="business_category_22"/>
+    </record>
+    <record id="business_activity_138" model="adv.business.activity">
+	<field name="code">900002</field>
+	<field name="name">Rental of personal property</field>
+	<field name="category_id" ref="business_category_22"/>
+    </record>
+    <record id="business_activity_139" model="adv.business.activity">
+	<field name="code">900003</field>
+	<field name="name">Passive income activities with controlled organizations</field>
+	<field name="category_id" ref="business_category_22"/>
+    </record>
+    </data>
+</odoo>

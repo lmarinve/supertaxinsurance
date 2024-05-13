@@ -17,3 +17,4 @@
 
 from . import website
 from . import advance_signup
+from . import res_partner

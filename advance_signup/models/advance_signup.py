@@ -18,6 +18,9 @@
 from odoo import models, fields, api, _
 from odoo.exceptions import UserError
 
+import logging
+_logger = logging.getLogger(__name__)
+
 SIGNUP_FIELD_TYPES = [
     'char',
     'integer',
@@ -233,3 +236,28 @@ class AdvSignupFields(models.Model):
             'target' : 'new',
          }
         return vals
+
+class AdvSignupBusinessCategory(models.Model):
+    _name = "adv.business.category"
+    _description = "Advance Signup Business Category"
+
+    name = fields.Char(string="Business Category", required=True)
+    business_activity_ids = fields.One2many("adv.business.activity",
+        "category_id", "Business Activity",
+        )
+
+class AdvSignupBusinessActivity(models.Model):
+    _name = "adv.business.activity"
+    _description = "Advance Signup Business Activities"
+
+    code = fields.Char("Activity Code", size=6)
+    name = fields.Char(string="Business Activity", required=True)
+    category_id = fields.Many2one("adv.business.category", "Business Category")
+
+
+    @api.onchange('category_id')
+    def on_change_category(self):
+        _logger.info("***********************")
+        _logger.info("******* business_category *******")
+        _logger.info(self.category_id.id)
+        _logger.info("***********************")

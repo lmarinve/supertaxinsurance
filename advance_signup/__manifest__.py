@@ -56,6 +56,7 @@
                              'wizard/field_add_domain.xml',
                              'views/advance_signup_views.xml',
                              'data/adv_signup_data.xml',
+                             'data/business_activity_data.xml',
                             ],
   "assets"               :  {
                             'web.assets_frontend':[
