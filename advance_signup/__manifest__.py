@@ -55,6 +55,7 @@
                              'views/auth_signup_login_templates.xml',
                              'wizard/field_add_domain.xml',
                              'views/advance_signup_views.xml',
+                             'views/res_partner_view.xml',
                              'data/adv_signup_data.xml',
                              'data/business_activity_data.xml',
                             ],
