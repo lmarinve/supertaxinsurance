@@ -9,7 +9,11 @@
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
 		<xpath expr="//field[@name='vat']" position="after">
-                    <field name='gender' attrs="{'invisible':[('company_type','=','company')]}" options="{'horizontal': true}" class="oe_form_label_new" widget="radio"/>
+		    <label for="dependents" string="Children #"/>
+		    <div class="o_row">
+                    	<field name='dependents' placeholder="Children #" attrs="{'invisible':[('company_type','=','company')]}"/>
+                    	<field name='civil_status' placeholder="Civil Status" attrs="{'invisible':[('company_type','=','company')]}"/>
+		    </div>
 		    <label for="age" string="Age"/>
 		    <div class="o_row">
 			<field name='age' placeholder="Age" attrs="{'invisible':[('company_type','=','company')]}"/>
@@ -19,16 +23,6 @@
 		    <div class="o_row">
                     	<field name='weight' placeholder="Weight" attrs="{'invisible':[('company_type','=','company')]}"/>
 		    	<field name='height' placeholder="Height" attrs="{'invisible':[('company_type','=','company')]}"/>
-		    </div>
-		    <label for="dependents" string="Children #"/>
-		    <div class="o_row">
-                    	<field name='dependents' placeholder="Children #" attrs="{'invisible':[('company_type','=','company')]}"/>
-                    	<field name='civil_status' placeholder="Civil Status" attrs="{'invisible':[('company_type','=','company')]}"/>
-		    </div>
-		    <label for="nationality" string="Nationality"/>
-		    <div class="o_row">
-                    <field name='nationality' attrs="{'invisible':[('company_type','=','company')]}"/>
-                    <field name='place_of_birth' placeholder="Place of Birth" attrs="{'invisible':[('company_type','=','company')]}"/>
 		    </div>
 		    <label for="license_exp" string="Driver ID expiration"/>
 		    <div class="o_row">
@@ -45,12 +39,19 @@
 		    <field name='passport_exp' attrs="{'invisible':[('company_type','=','company')]}"/>
                     <field name='passport_no' placeholder="Passport #" attrs="{'invisible':[('company_type','=','company')]}"/>
 		    </div>
+		    <label for="nationality" string="Nationality"/>
+		    <div class="o_row">
+                    <field name='nationality' attrs="{'invisible':[('company_type','=','company')]}"/>
+                    <field name='place_of_birth' placeholder="Place of Birth" attrs="{'invisible':[('company_type','=','company')]}"/>
+		    </div>
                 </xpath>
                 <xpath expr="//field[@name='function']" position="after">
                     <field name='income' attrs="{'invisible':[('company_type','=','company')]}"/>
                     <field name='industry_id' attrs="{'invisible':[('company_type','=','company')]}"/>
-                    <field name='business_activity' attrs="{'invisible':[('company_type','=','company')]}"/>
-                    <field name='no_of_employees' attrs="{'invisible':[('company_type','=','company')]}"/>
+                    <field name='no_of_employees' placeholder="Employees range" attrs="{'invisible':[('company_type','=','company')]}"/>
+	        </xpath>
+                <xpath expr="//field[@name='category_id']" position="after">
+                    <field name='gender' attrs="{'invisible':[('company_type','=','company')]}" options="{'horizontal': true}" class="oe_form_label_new" widget="radio"/>
                     <field name='tobacco' attrs="{'invisible':[('company_type','=','company')]}"/>
 	        </xpath>
 		<xpath expr="//field[@name='child_ids']/form/sheet/group/group[1]/field[@name='name']" position="after">

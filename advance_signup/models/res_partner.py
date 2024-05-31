@@ -61,7 +61,7 @@ class ResPartner(models.Model):
                                         ('10000-100000','10000-100000')
                                         ])
     category_id = fields.Many2many('res.partner.category', column1='partner_id',
-                                    column2='category_id', string='Employment Type Tags')
+                                    column2='category_id', string='Employment Type')
     tobacco = fields.Boolean(string="Tobacco User")
 
 
