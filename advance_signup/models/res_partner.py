@@ -22,7 +22,7 @@ class ResPartner(models.Model):
                                         ('male', 'Male'),
                                         ('female', 'Female')
                                         ])
-    date = fields.Date(string='Birthday')
+    date = fields.Date(string='Birthday *')
     age = fields.Integer(string='Age')
     weight = fields.Integer(string='Weight')
     height = fields.Char(string='Height')
