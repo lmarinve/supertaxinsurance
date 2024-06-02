@@ -17,16 +17,16 @@ class ResPartner(models.Model):
 
     #individual registration form fields
     company_name = fields.Char('Company Name')
-    gender = fields.Selection(string='Gender', 
+    gender = fields.Selection(string='Gender *', required= True, 
                             selection=[
                                         ('male', 'Male'),
                                         ('female', 'Female')
                                         ])
-    date = fields.Date(string='Birthday *')
+    date = fields.Date(string='Birthday *', required= True,)
     age = fields.Integer(string='Age')
     weight = fields.Integer(string='Weight')
     height = fields.Char(string='Height')
-    civil_status = fields.Selection(string='Civil Status', 
+    civil_status = fields.Selection(string='Civil Status *', required= True,
                             selection=[
                                         ('single', 'Single'),
                                         ('household', 'Household'),
@@ -34,9 +34,9 @@ class ResPartner(models.Model):
                                         ('separated', 'Separated'),
                                         ('divorced', 'Divorced')
                                         ])
-    dependents = fields.Integer(string="Dependents")
+    dependents = fields.Integer(string="Dependents *", required= True)
     function = fields.Char(string='Job Position')
-    income = fields.Integer(string="household income AGI")
+    income = fields.Integer(string="household income AGI *", required= True)
     place_of_birth = fields.Char(string='Place of Birth')
     nationality = fields.Many2one('res.country', string='Nationality')
     license_no = fields.Char(string='Driver License or ID')
