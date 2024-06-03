@@ -17,16 +17,16 @@ class ResPartner(models.Model):
 
     #individual registration form fields
     company_name = fields.Char('Company Name')
-    gender = fields.Selection(string='Gender *', required= True, 
+    gender = fields.Selection(string='Gender *', required=True, 
                             selection=[
                                         ('male', 'Male'),
                                         ('female', 'Female')
                                         ])
-    date = fields.Date(string='Birthday *', required= True,)
+    date = fields.Date(string='Birthday *', required=True,)
     age = fields.Integer(string='Age')
     weight = fields.Integer(string='Weight')
     height = fields.Char(string='Height')
-    civil_status = fields.Selection(string='Civil Status *', required= True,
+    civil_status = fields.Selection(string='Civil Status *', required=True,
                             selection=[
                                         ('single', 'Single'),
                                         ('household', 'Household'),
@@ -34,19 +34,17 @@ class ResPartner(models.Model):
                                         ('separated', 'Separated'),
                                         ('divorced', 'Divorced')
                                         ])
-    dependents = fields.Integer(string="Dependents *", required= True)
+    dependents = fields.Integer(string="Dependents *", required=True)
     function = fields.Char(string='Job Position')
-    income = fields.Integer(string="household income AGI *", required= True)
+    income = fields.Integer(string="household income AGI *", required=True)
     place_of_birth = fields.Char(string='Place of Birth')
-    nationality = fields.Many2one('res.country', string='Nationality')
+    nationality = fields.Many2one('res.country', string='Nationality *', required=True)
     license_no = fields.Char(string='Driver License or ID')
     license_exp = fields.Date('ID Expiration')
     permit_no = fields.Char(string='Work Permit')
     permit_exp = fields.Date('Work Permit Expiration')
     passport_no = fields.Char(string='Passport number')
     passport_exp = fields.Date('Passport Expiration')
-    business_category = fields.Many2one('adv.business.category', string="Business Category")
-    business_activity = fields.Many2one('adv.business.activity', string="Business Activity")
 
     #company registration form fields
     industry_id = fields.Many2one('res.partner.industry', 'Industry')
@@ -63,16 +61,3 @@ class ResPartner(models.Model):
     category_id = fields.Many2many('res.partner.category', column1='partner_id',
                                     column2='category_id', string='Employment Type')
     tobacco = fields.Boolean(string="Tobacco User")
-
-
-    @api.onchange('business_category')
-    def on_change_category(self):
-        _logger.info("***********************")
-        _logger.info("******* business_category *******")
-        _logger.info(self.business_category.id)
-        _logger.info("***********************")
-        if self.business_category:
-            ids = self.env['adv.business.activity'].search([('category_id', '=', self.business_category.id)])
-        return {
-            'domain': {'business_activity': [('id', 'in', ids.ids)],}
-        }
