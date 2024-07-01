@@ -12,7 +12,7 @@
 #    This program is distributed in the hope that it will be useful,
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU AFFERO GENERAL PUBLIC LICENSE (AGPL v3) for more details.
+#    GNU AFFERO GENERAL PUBLIC LICENSE (AGPL v3) for more detail.
 #
 #    You should have received a copy of the GNU AFFERO GENERAL PUBLIC LICENSE
 #    (AGPL v3) along with this program.
@@ -24,8 +24,8 @@ from odoo import api, fields, models, _
 from odoo.exceptions import UserError, ValidationError
 
 
-class PolicyDetails(models.Model):
-    _name = 'policy.details'
+class PolicyDetail(models.Model):
+    _name = 'policy.detail'
 
     name = fields.Char(string='Description', required=True)
     policy_number = fields.Integer(string="Policy Number", required=True,
@@ -33,7 +33,7 @@ class PolicyDetails(models.Model):
                                         "an insurance company uses to identify"
                                         "you as a policyholder")
     insurance_detail_id = fields.Many2one(
-        'insurance.details', string='Insured ID', required=True)
+        'insurance.detail', string='Insurance ID', required=True)
     commission_rate = fields.Float(string='Commission %')
     start_date = fields.Date(
         string='Date Started', default=fields.Date.context_today, required=True)
@@ -118,8 +118,6 @@ class PolicyClass(models.Model):
     name = fields.Char(string='Description')
     policy_group_ids = fields.One2many(
         'policy.group', 'policy_class_id', string='Policy Group')
-    policy_carrier_ids = fields.One2many(
-        'policy.carrier', 'policy_class_id', string='Policy Carrier')
 
 
 class PolicyGroup(models.Model):
@@ -128,8 +126,10 @@ class PolicyGroup(models.Model):
     name = fields.Char(string='Description')
     policy_class_id = fields.Many2one(
         'policy.class', string='Policy Class', required=True)
-    policy_class_ids = fields.One2many(
+    policy_type_ids = fields.One2many(
         'policy.type', 'policy_group_id', string='Policy Type')
+    policy_carrier_ids = fields.One2many(
+        'policy.carrier', 'policy_group_id', string='Policy Carrier')
 
 
 class PolicyType(models.Model):
@@ -144,5 +144,5 @@ class PolicyCarrier(models.Model):
     _name = 'policy.carrier'
 
     name = fields.Char(string='Description')
-    policy_class_id = fields.Many2one(
-        'policy.class', string='Policy Class', required=True)
+    policy_group_id = fields.Many2one(
+        'policy.group', string='Policy Group', required=True)

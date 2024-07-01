@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="employee_details_view_form" model="ir.ui.view">
-        <field name="name">employee.details.view.form</field>
-        <field name="model">employee.details</field>
+    <record id="employee_detail_view_form" model="ir.ui.view">
+        <field name="name">employee.detail.view.form</field>
+        <field name="model">employee.detail</field>
         <field name="arch" type="xml">
-            <form string="Employee Details Form">
+            <form string="Employee Detail Form">
                 <header>
                     <button name="action_salary_payment" string="Salary Payment" type="object"
                             attrs="{'invisible': [('user_id', '=', False)]}" class="oe_highlight"/>
@@ -43,9 +43,9 @@
         </field>
     </record>
 
-    <record id="employee_details_view_tree" model="ir.ui.view">
-        <field name="name">employee.details.view.tree</field>
-        <field name="model">employee.details</field>
+    <record id="employee_detail_view_tree" model="ir.ui.view">
+        <field name="name">employee.detail.view.tree</field>
+        <field name="model">employee.detail</field>
         <field name="arch" type="xml">
             <tree string="Employee Details Tree">
                 <field name="name"/>
@@ -57,9 +57,9 @@
         </field>
     </record>
 
-    <record id="employee_details_action" model="ir.actions.act_window">
+    <record id="employee_detail_action" model="ir.actions.act_window">
         <field name="name">Employee Management</field>
-        <field name="res_model">employee.details</field>
+        <field name="res_model">employee.detail</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">

@@ -12,7 +12,7 @@
 #    This program is distributed in the hope that it will be useful,
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU AFFERO GENERAL PUBLIC LICENSE (AGPL v3) for more details.
+#    GNU AFFERO GENERAL PUBLIC LICENSE (AGPL v3) for more detail.
 #
 #    You should have received a copy of the GNU AFFERO GENERAL PUBLIC LICENSE
 #    (AGPL v3) along with this program.
@@ -23,18 +23,18 @@
 from odoo import api, fields, models, _
 
 
-class ClaimDetails(models.Model):
-    _name = 'claim.details'
+class ClaimDetail(models.Model):
+    _name = 'claim.detail'
 
     name = fields.Char(string='Name', required=True, copy=False,
                        readonly=True, index=True, default=lambda self: _('New'))
     name_2 = fields.Char(
         string='Name 2', required=True, copy=False, readonly=True, index=True,
         default=lambda self: _('New'))
-    insurance_id = fields.Many2one('insurance.details', required=True, string='Insurance',)
+    insurance_id = fields.Many2one('insurance.detail', required=True, string='Insurance',)
     partner_id = fields.Many2one(related='insurance_id.partner_id',
                                  string='Customer', readonly=True)
-    policy_id = fields.Many2one('policy.details', required=True, string= 'Policy',
+    policy_id = fields.Many2one('policy.detail', required=True, string= 'Policy',
                                    domain=[('state', '=', 'confirmed')],
                                    help="Confirmed orders can be selected")
     employee_id = fields.Many2one(related='insurance_id.employee_id',
@@ -53,7 +53,7 @@ class ClaimDetails(models.Model):
     def create(self, vals):
         if vals.get('name', 'New') == 'New':
             vals['name'] = self.env['ir.sequence'].next_by_code(
-                'claim.details') or 'New'
+                'claim.detail') or 'New'
         return super(ClaimDetails, self).create(vals)
 
     def action_create_bill(self):

@@ -12,7 +12,7 @@
 #    This program is distributed in the hope that it will be useful,
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU AFFERO GENERAL PUBLIC LICENSE (AGPL v3) for more details.
+#    GNU AFFERO GENERAL PUBLIC LICENSE (AGPL v3) for more detail.
 #
 #    You should have received a copy of the GNU AFFERO GENERAL PUBLIC LICENSE
 #    (AGPL v3) along with this program.
@@ -34,10 +34,10 @@
     'data': [
         'security/ir.model.access.csv',
         'data/insurance_management_data.xml',
-        'views/claim_details_views.xml',
-        'views/employee_details_views.xml',
-        'views/insurance_details_views.xml',
-        'views/policy_details_views.xml',
+        'views/claim_detail_views.xml',
+        'views/employee_detail_views.xml',
+        'views/insurance_detail_views.xml',
+        'views/policy_detail_views.xml',
         'views/insurance_management_menus.xml'
     ],
     'images': ['static/description/banner.png'],

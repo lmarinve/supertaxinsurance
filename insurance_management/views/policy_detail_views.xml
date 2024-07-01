@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="policy_details_view_form" model="ir.ui.view">
-        <field name="name">policy.details.view.form</field>
-        <field name="model">policy.details</field>
+    <record id="policy_detail_view_form" model="ir.ui.view">
+        <field name="name">policy.detail.view.form</field>
+        <field name="model">policy.detail</field>
         <field name="arch" type="xml">
             <form string="Policy Details Form">
 		<header>
@@ -52,9 +52,9 @@
         </field>
     </record>
 
-    <record id="policy_details_view_tree" model="ir.ui.view">
-        <field name="name">policy.details.view.tree</field>
-        <field name="model">policy.details</field>
+    <record id="policy_detail_view_tree" model="ir.ui.view">
+        <field name="name">policy.detail.view.tree</field>
+        <field name="model">policy.detail</field>
         <field name="arch" type="xml">
             <tree string="Policy Details Tree">
 		<field name="name"/>
@@ -70,9 +70,9 @@
         </field>
     </record>
 
-    <record id="policy_details_action" model="ir.actions.act_window">
+    <record id="policy_detail_action" model="ir.actions.act_window">
         <field name="name">Policy Management</field>
-        <field name="res_model">policy.details</field>
+        <field name="res_model">policy.detail</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">

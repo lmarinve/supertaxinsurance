@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="insurance_details_view_form" model="ir.ui.view">
-        <field name="name">insurance.details.view.form</field>
-        <field name="model">insurance.details</field>
+    <record id="insurance_detail_view_form" model="ir.ui.view">
+        <field name="name">insurance.detail.view.form</field>
+        <field name="model">insurance.detail</field>
         <field name="arch" type="xml">
-            <form string="Insurance Details Form">
+            <form string="Insurance Detail Form">
                 <sheet>
                     <div class="oe_title">
                         <h1>
@@ -29,11 +29,11 @@
         </field>
     </record>
 
-    <record id="insurance_details_view_tree" model="ir.ui.view">
-        <field name="name">insurance.details.view.tree</field>
-        <field name="model">insurance.details</field>
+    <record id="insurance_detail_view_tree" model="ir.ui.view">
+        <field name="name">insurance.detail.view.tree</field>
+        <field name="model">insurance.detail</field>
         <field name="arch" type="xml">
-            <tree string="Insurance Details Tree">
+            <tree string="Insurance Detail Tree">
                 <field name="name"/>
                 <field name="partner_id"/>
                 <field name="employee_id"/>
@@ -41,9 +41,9 @@
         </field>
     </record>
 
-    <record id="insurance_details_action" model="ir.actions.act_window">
+    <record id="insurance_detail_action" model="ir.actions.act_window">
         <field name="name">Insurance Management</field>
-        <field name="res_model">insurance.details</field>
+        <field name="res_model">insurance.detail</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">

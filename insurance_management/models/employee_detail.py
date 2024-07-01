@@ -12,7 +12,7 @@
 #    This program is distributed in the hope that it will be useful,
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU AFFERO GENERAL PUBLIC LICENSE (AGPL v3) for more details.
+#    GNU AFFERO GENERAL PUBLIC LICENSE (AGPL v3) for more detail.
 #
 #    You should have received a copy of the GNU AFFERO GENERAL PUBLIC LICENSE
 #    (AGPL v3) along with this program.
@@ -26,8 +26,8 @@ from odoo import api, fields, models, _
 from odoo.exceptions import UserError, ValidationError
 
 
-class EmployeeDetails(models.Model):
-    _name = 'employee.details'
+class EmployeeDetail(models.Model):
+    _name = 'employee.detail'
 
     name = fields.Char(string='Name', required=True)
     user_id = fields.Many2one(
@@ -43,7 +43,7 @@ class EmployeeDetails(models.Model):
         default=lambda self: self.env.user.company_id.currency_id.id)
     base_salary = fields.Monetary(string='Base Salary')
     last_salary_date = fields.Date(string='Last Payment On', copy=False)
-    insurance_ids = fields.One2many('insurance.details', 'employee_id',
+    insurance_ids = fields.One2many('insurance.detail', 'employee_id',
                                     string='Last Payment On', readonly=True)
     note_field = fields.Html(string='Comment')
     invoice_id = fields.Many2one(

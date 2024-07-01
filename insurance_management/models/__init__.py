@@ -12,7 +12,7 @@
 #    This program is distributed in the hope that it will be useful,
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU AFFERO GENERAL PUBLIC LICENSE (AGPL v3) for more details.
+#    GNU AFFERO GENERAL PUBLIC LICENSE (AGPL v3) for more detail.
 #
 #    You should have received a copy of the GNU AFFERO GENERAL PUBLIC LICENSE
 #    (AGPL v3) along with this program.
@@ -21,7 +21,7 @@
 #############################################################################
 
 from . import account_move
-from . import claim_details
-from . import employee_details
-from . import insurance_details
-from . import policy_details
+from . import claim_detail
+from . import employee_detail
+from . import insurance_detail
+from . import policy_detail

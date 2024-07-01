@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="claim_details_view_form" model="ir.ui.view">
-        <field name="name">claim.details.view.form</field>
-        <field name="model">claim.details</field>
+    <record id="claim_detail_view_form" model="ir.ui.view">
+        <field name="name">claim.detail.view.form</field>
+        <field name="model">claim.detail</field>
         <field name="arch" type="xml">
-            <form string="Claim Details Form">
+            <form string="Claim Detail Form">
                 <header>
                     <button name="action_create_bill" string="Create Bill" type="object" class="oe_highlight"
                             attrs="{'invisible': [('invoice_id', '!=', False)]}"/>
@@ -40,11 +40,11 @@
         </field>
     </record>
 
-    <record id="claim_details_view_tree" model="ir.ui.view">
-        <field name="name">claim.details.view.tree</field>
-        <field name="model">claim.details</field>
+    <record id="claim_detail_view_tree" model="ir.ui.view">
+        <field name="name">claim.detail.view.tree</field>
+        <field name="model">claim.detail</field>
         <field name="arch" type="xml">
-            <tree string="Claim Details Tree">
+            <tree string="Claim Detail Tree">
                 <field name="name"/>
                 <field name="insurance_id"/>
                 <field name="partner_id"/>
@@ -55,9 +55,9 @@
         </field>
     </record>
 
-    <record id="claim_details_action" model="ir.actions.act_window">
+    <record id="claim_detail_action" model="ir.actions.act_window">
         <field name="name">Claim Management</field>
-        <field name="res_model">claim.details</field>
+        <field name="res_model">claim.detail</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">

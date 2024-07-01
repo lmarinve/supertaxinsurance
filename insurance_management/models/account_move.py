@@ -12,7 +12,7 @@
 #    This program is distributed in the hope that it will be useful,
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU AFFERO GENERAL PUBLIC LICENSE (AGPL v3) for more details.
+#    GNU AFFERO GENERAL PUBLIC LICENSE (AGPL v3) for more detail.
 #
 #    You should have received a copy of the GNU AFFERO GENERAL PUBLIC LICENSE
 #    (AGPL v3) along with this program.
@@ -26,5 +26,5 @@ from odoo import models, fields
 class AccountMove(models.Model):
     _inherit = 'account.move'
 
-    insurance_id = fields.Many2one('insurance.details', string='Insurance')
-    claim_id = fields.Many2one('claim.details', string='Insurance')
+    insurance_id = fields.Many2one('insurance.detail', string='Insurance')
+    claim_id = fields.Many2one('claim.detail', string='Insurance')
